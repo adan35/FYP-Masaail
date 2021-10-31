@@ -1,37 +1,28 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
-import Auth from './screens/auth/Auth';
-import Admin  from './screens/admin/Admin';
-import Investor from './screens/investor/Investor';
-import Reviewer from "./screens/reviewer/Reviewer";
+import { Auth, Admin, Investor, Reviewer } from "./screens";
 
 
 function App() {
   return (
-    <>
-    <Router>
-      app works  <br/>
+    <div>
+      app works < br />
       <Switch>
-        <Route path="/auth">
+        <Route exact path="/auth">
           <Auth />
         </Route>
-        <Route path="/admin">
+        <Route exact path="/admin">
           <Admin />
         </Route>
-        <Route path="/investor">
+        <Route exact path="/investor">
           <Investor />
         </Route>
-        <Route path="/reviewer">
+        <Route exact path="/reviewer">
           <Reviewer />
         </Route>
       </Switch>
-    </Router>
-    </>
+    </div>
   );
 }
 

@@ -1,6 +1,7 @@
 import {Approvals, Dashboard, List, Profile, ReactedReviews, Reviews, Chat} from "./components";
 import "./admin.css";
-function Admin(){
+
+const Admin = () => {
     return (
         <>
             <List />

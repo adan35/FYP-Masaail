@@ -1,8 +1,11 @@
-function MyPolls(params) {
-    return(
-        <>
-        <h3>Poll is created!!!</h3>
-        </>
-    );
+import React from 'react'
+
+const MyPolls = () => {
+    return (
+        <div>
+            mypolls
+        </div>
+    )
 }
+
 export default MyPolls;

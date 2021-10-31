@@ -1,8 +1,11 @@
-function OTP(params) {
-    return(
-        <>
-        This OTP Screen
-        </>
-    );
+import React from 'react'
+
+const OTP = () => {
+    return (
+        <div>
+            otp
+        </div>
+    )
 }
+
 export default OTP;

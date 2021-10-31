@@ -1,13 +1,13 @@
-import {ChatBox, CreatePoll, MyPolls, Timeline} from './components';
+import { ChatBox, CreatePoll, MyPolls, Timeline } from './components';
 import "./investor.css";
 
-function Investor(params) {
-    return(
-        <>
-        <MyPolls/>
-        <CreatePoll/>
-        </>
-    );    
+const Investor = (params) => {
+    return (
+        <div>
+            <MyPolls />
+            <CreatePoll />
+        </div>
+    );
 }
 export default Investor;
 

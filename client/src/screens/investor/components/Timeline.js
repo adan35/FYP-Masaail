@@ -1,8 +1,11 @@
-function Timeline(params) {
-    return(
-        <>
-        This is timeline 
-        </>
-    );
+import React from 'react'
+
+const Timeline = () => {
+    return (
+        <div>
+            timeline
+        </div>
+    )
 }
+
 export default Timeline;

@@ -1,12 +1,12 @@
-import {CreatePost, MyPosts, Timeline} from  "./components";
+import { CreatePost, MyPosts, Timeline } from "./components";
 import "./reviewer.css";
 
-function Reviewer(params) {
-    return(
-        <>
-        <CreatePost />
-        <MyPosts />
-        </>
+const Reviewer = (params) => {
+    return (
+        <div>
+            <CreatePost />
+            <MyPosts />
+        </div>
     );
 }
 export default Reviewer;

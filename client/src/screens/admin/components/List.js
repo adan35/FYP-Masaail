@@ -1,10 +1,11 @@
-function List(params) {
-    return(
-        <>
-        <h3>
-            This is List
-        </h3>
-        </>
-    );
+import React from 'react'
+
+const List = () => {
+    return (
+        <div>
+            this is list
+        </div>
+    )
 }
+
 export default List;

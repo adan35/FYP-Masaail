@@ -6,4 +6,4 @@ import ReactedReviews from "./ReactedReviews";
 import Reviews from "./Reviews";
 import Chat from './Chats';
 
-export {Approvals, Dashboard, List, Profile, ReactedReviews, Reviews, Chat};
+export { Approvals, Dashboard, List, Profile, ReactedReviews, Reviews, Chat };

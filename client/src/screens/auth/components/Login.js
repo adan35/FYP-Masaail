@@ -1,8 +1,11 @@
-function Login(params) {
-    return(
-        <>
-            <h1>Adan Shahxad</h1>
-        </>
-    );
+import React from 'react'
+
+const Login = () => {
+    return (
+        <div>
+            login
+        </div>
+    )
 }
+
 export default Login;

@@ -1,8 +1,11 @@
-function Forgot(params) {
-    return(
-        <>
-       <h1> This forgot Password Screen </h1>
-        </>
-    );
+import React from 'react'
+
+const Forgot = () => {
+    return (
+        <div>
+            forgot
+        </div>
+    )
 }
+
 export default Forgot;

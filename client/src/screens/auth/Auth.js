@@ -1,6 +1,7 @@
 import {Forgot, Home, Login, OTP, SignUp} from "./components";  
 import "./auth.css";
-function Auth(){
+
+const Auth = () => {
     return (
         <>
             <Login/>
