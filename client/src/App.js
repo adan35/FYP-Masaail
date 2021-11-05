@@ -9,18 +9,10 @@ function App() {
     <div>
       app works < br />
       <Switch>
-        <Route exact path="/auth">
-          <Auth />
-        </Route>
-        <Route exact path="/admin">
-          <Admin />
-        </Route>
-        <Route exact path="/investor">
-          <Investor />
-        </Route>
-        <Route exact path="/reviewer">
-          <Reviewer />
-        </Route>
+        <Route path="/auth" component={Auth} />
+        <Route path="/admin" component={Admin} />
+        <Route path="/investor" component={Investor} />
+        <Route path="/reviewer" component={Reviewer} />
       </Switch>
     </div>
   );

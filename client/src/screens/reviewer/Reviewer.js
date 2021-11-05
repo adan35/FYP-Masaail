@@ -1,11 +1,15 @@
 import { CreatePost, MyPosts, Timeline } from "./components";
+import { Switch, Route } from "react-router-dom";
 import "./reviewer.css";
 
 const Reviewer = (params) => {
     return (
         <div>
-            <CreatePost />
-            <MyPosts />
+            <Switch>
+                <Route exact path="/reviewer" component={Timeline}/>
+                <Route exact path="/reviewer/createpost" component={CreatePost}/>
+                <Route exact path="/reviewer/myposts" component={MyPosts}/>
+            </Switch>
         </div>
     );
 }
