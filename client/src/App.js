@@ -7,7 +7,6 @@ import { Auth, Admin, Investor, Reviewer } from "./screens";
 function App() {
   return (
     <div>
-      app works < br />
       <Switch>
         <Route path="/auth" component={Auth} />
         <Route path="/admin" component={Admin} />

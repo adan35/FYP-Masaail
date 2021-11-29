@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Forgot = () => {
-    return (
-        <div>
-            forgot
-        </div>
-    )
-}
+  return (
+    <>
+     
+    </>
+  );
+};
 
 export default Forgot;
