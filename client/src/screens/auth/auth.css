@@ -1,13 +1,13 @@
 /* OTP PAGE */
 h2 {
-  color: #c763ff;
+  color: #0047AB;
   margin-bottom: 30px;
 }
 p {
   color: #2e2e2e;
 }
 p {
-  color: #c763ff;
+  color: #0047AB;
 }
 .container {
   display: flex;
@@ -27,22 +27,22 @@ p {
 }
 
 .btn-primary {
-  background: #c763ff;
+  background: #0047AB;
   color: #ffffff;
-  border-color: #c763ff;
+  border-color: #0047AB;
 }
 .btn-primary:hover {
   background: transparent;
-  color: #c763ff;
+  color: #0047AB;
 }
 .btn-secondary {
-  background: #c763ff;
+  background: #0047AB;
   color: #ffffff;
   border-color: none;
   margin-right: 20px;
 }
 .btn-secondary:hover {
-  background: #c763ff;
+  background: #0047AB;
   color: #ffffff;
 }
 .otp-field {
@@ -51,13 +51,13 @@ p {
   height: 50px;
   text-align: center;
   margin-right: 5px;
-  border: 2px solid #c763ff;
+  border: 2px solid #0047AB;
   margin-bottom: 15px;
 }
 .otp-field:focus {
   text-decoration: none;
   background-color: #ffffff;
-  border-color: #c763ff;
+  border-color: #0047AB;
   outline: 0;
   box-shadow: none;
 }
@@ -70,7 +70,7 @@ p {
   border-radius: 500px;
   transition-property: background-color, border-color, color, box-shadow, filter;
   transition-duration: 0.3s;
-  border: 3px solid #c763ff;
+  border: 3px solid #0047AB;
   letter-spacing: 2px;
   min-width: 140px;
   text-transform: uppercase;
@@ -86,7 +86,7 @@ p {
 }
 .button:hover {
   color: #fff;
-  background-color: #c763ff;
+  background-color: #0047AB;
   border: none;
 }
 .buttonClear {
@@ -98,7 +98,7 @@ p {
   border-radius: 500px;
   transition-property: background-color, border-color, color, box-shadow, filter;
   transition-duration: 0.3s;
-  border: 3px solid #c763ff;
+  border: 3px solid #0047AB;
   letter-spacing: 2px;
   min-width: 140px;
   text-transform: uppercase;
@@ -108,7 +108,7 @@ p {
   padding: 16px 14px 18px;
   color: #ffffff;
   box-shadow: inset 0 0 0 2px none;
-  background-color: #c763ff;
+  background-color: #0047AB;
   height: 48px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -116,12 +116,12 @@ p {
 .buttonClear:hover {
   color: #fff;
   background-color: transparent;
-  border: 3px solid #c763ff;
-  color: #c763ff;
+  border: 3px solid #0047AB;
+  color: #0047AB;
 }
 /* Forgot */
 .text-email {
-  color: #c763ff;
+  color: #0047AB;
 }
 .email-forgot {
   width: 300px;
@@ -136,25 +136,25 @@ p {
   height: 50px;
   padding-left: 10px;
   margin-right: 5px;
-  border: 3px solid #c763ff;
+  border: 3px solid #0047AB;
   border-radius: 5px;
   margin-bottom: 15px;
   background-color: transparent;
   margin-right: 10px;
-  color: #c763ff;
+  color: #0047AB;
   font-weight: bold;
   margin-bottom: 30px;
 }
 .input-email:focus {
   background-color: transparent;
-  border-color: #c763ff;
+  border-color: #0047AB;
   outline: 0;
   box-shadow: none;
-  color: #c763ff;
+  color: #0047AB;
   font-weight: 500;
 }
 .btn-send {
-  background-color: #c763ff;
+  background-color: #0047AB;
   display: inline-block;
   outline: none;
   cursor: pointer;
@@ -163,7 +163,7 @@ p {
   border-radius: 3px;
   transition-property: background-color, border-color, color, box-shadow, filter;
   transition-duration: 0.3s;
-  border: 3px solid #c763ff;
+  border: 3px solid #0047AB;
   letter-spacing: 2px;
   min-width: 140px;
   font-weight: 600;
@@ -173,21 +173,21 @@ p {
   padding: auto;
   color: #ffffff;
   box-shadow: inset 0 0 0 2px none;
-  background-color: #c763ff;
+  background-color: #0047AB;
   height: 40px;
   margin-right: 10px;
   margin-bottom: 10px;
 }
 .btn-send:hover {
   background-color: transparent;
-  border: 3px solid #c763ff;
+  border: 3px solid #0047AB;
   color: #fff;
-  color: #c763ff;
+  color: #0047AB;
 }
 .btn-send:focus {
   color: #fff;
   background-color: transparent;
-  border: 3px solid #c763ff;
-  color: #c763ff;
+  border: 3px solid #0047AB;
+  color: #0047AB;
   box-shadow: transparent;
 }
