@@ -11,6 +11,7 @@ const Auth = () => {
                 <Route exact path="/auth/forgot" component={Forgot} />
                 <Route exact path="/auth/otp" component={OTP} />
                 <Route exact path="/auth/signup" component={SignUp} />
+                <Route exact path="/auth/login" component={Login} />
             </Switch>
         </div>
     );

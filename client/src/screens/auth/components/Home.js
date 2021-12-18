@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../App.css';
+import '../auth.css';
 const Home = () => {
     return (
         <div class="home_container">
@@ -19,7 +19,7 @@ const Home = () => {
               <button class="btn">Reviewer</button>
               <button class="btn">Investor</button>
             </div>
-            <p class="already_registered">Already Registered? <a href="#">Login</a></p>
+            <p class="already_registered">Already Registered? <a href="...">Login</a></p>
           </main>
     
     
