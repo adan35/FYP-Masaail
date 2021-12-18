@@ -1,0 +1,141 @@
+
+/* dashboard */
+
+.userHeading{
+    align-self: center;
+}
+.main {
+        background-color: #FFFFFF;
+        width: 400px;
+        height: 400px;
+        margin: 10em auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+      }
+.investor{
+    align-self: center;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color, border-color, color, box-shadow, filter;
+    transition-duration: 0.3s;
+    border: 3px solid #0047AB;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px;
+    color: #616467;
+    box-shadow: inset 0 0 0 2px none;
+    background-color: transparent;
+    height: 48px;
+    width: 300px;
+  }
+  .investor:hover {
+    color: #fff;
+    background-color: #0047AB;
+    border: none;
+  }
+  .approvals-pending {
+    align-self: center;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 10px;
+    transition-property: background-color, border-color, color, box-shadow, filter;
+    transition-duration: 0.3s;
+    border: 3px solid #0047AB;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px;
+    color: #505050;
+    box-shadow: inset 0 0 0 2px none;
+    background-color: transparent;
+    height: 80px;
+    width: 130px;
+    margin-top: 30px;
+  }
+  .approvals-pending:hover {
+    color: #fff;
+    background-color: #0047AB;
+    border: none;
+  }
+
+/* approvals */
+.container1{
+    width: 100%;
+    justify-content : center;
+}
+.listview1{
+    width : 80%;
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+/* .idNumber{
+    display: inline;
+    float: left; 
+    padding-right: 40px;
+}
+.name{
+    display: inline;
+    padding-right: 50px;
+}
+.dsgn{
+    display: inline;
+    padding-right: 50px;
+}
+.city{
+    display: inline;
+    padding-right: 150px;
+}
+.see-post{
+    display: inline;
+}
+.approve-btn{
+    display: inline;
+    float: right;
+}
+.delete-btn{
+    display: inline;
+    float: right;
+} */
+
+#list-pending {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #list-pending td, #list-pending th {   
+    width: 100px;
+  }
+  
+  .approve-btn{
+      margin-right: 20px;
+  }
+  .circle-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width:50px;
+    height: 50px;
+    border-radius: 200px;
+    background-color: #006994;
+
+}
+.idNumber{
+    color: white;
+    font-size: 25px;
+}
