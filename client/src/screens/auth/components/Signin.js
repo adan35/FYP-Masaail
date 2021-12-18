@@ -1,25 +1,26 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import '../auth.css';
 const Signin = () => {
     return (
         <div>
           <header>
-            <div class="logo">
+            <div className="logo">
               <h3>MASAAIL.com</h3>
             </div>
-            <div class="login_text">
+            <div className="login_text">
               <p>Login</p>
             </div>
           </header>
     
-          <div class="main">
-            <p class="sign" align="center">Sign in</p>
-            <form class="form1">
-              <input class="un " type="text" align="center" placeholder="Username" />
-              <input class="pass" type="password" align="center" placeholder="Password" />
-              <a class="submit" align="center">Sign in</a>
-              <p class="forgot" align="center"><a href="#">Forgot Password?</a></p>
-              <p class="signup">Don't have an account? <a href="#">Signup</a></p>
+          <div className="main">
+            <p className="sign" align="center">Sign in</p>
+            <form className="form1">
+              <input className="un " type="text" align="center" placeholder="Username" />
+              <input className="pass" type="password" align="center" placeholder="Password" />
+              <Link className="submit" align="center" to="#">Sign in</Link>
+              <p className="forgot" align="center"><Link to="#">Forgot Password?</Link></p>
+              <p className="signup">Don't have an account? <Link to="#">Signup</Link></p>
             </form>                      
           </div>
         </div>
