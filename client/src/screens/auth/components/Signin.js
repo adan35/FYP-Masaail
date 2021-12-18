@@ -1,6 +1,6 @@
 import React from 'react'
 import '../auth.css';
-const Login = () => {
+const Signin = () => {
     return (
         <div>
           <header>
@@ -26,4 +26,4 @@ const Login = () => {
       );
 }
 
-export default Login;
+export default Signin;
