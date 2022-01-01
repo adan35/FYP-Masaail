@@ -1,36 +1,35 @@
 import React from 'react'
 import { ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader, SidebarFooter, SidebarContent } from 'react-pro-sidebar';
-import { IoIosCreate } from "react-icons/io";
-import { MdTimeline, MdReviews} from "react-icons/md";
+import { IoIosCreate, IoIosStats } from "react-icons/io";
+import { MdTimeline, MdReviews, MdPostAdd} from "react-icons/md";
 import 'react-pro-sidebar/dist/css/styles.css';
+import '../../react-pro-sidebar.css'
 
 const CreatePost = () => {
+
     return (
         <>
-        <ProSidebar>
+        <ProSidebar className="pro-sidebar">
             <SidebarHeader>
-                <h1 style={{textAlign: 'center'}}>Masaail</h1>
+                <h1>Masaail</h1>
             </SidebarHeader>
 
             <SidebarContent>
             <Menu iconShape="square">
                 <MenuItem icon={<IoIosCreate />}>Create Review</MenuItem>
 
-                <SubMenu title="Timeline" icon={<MdTimeline />}>
-                    <MenuItem style={{marginLeft: "40px"}}>Statistics</MenuItem>
-                    <MenuItem style={{marginLeft: "40px"}}>Posts</MenuItem>
-                </SubMenu>
+                <MenuItem icon={<MdTimeline />}>Timeline</MenuItem>
 
                 <MenuItem icon={<MdReviews />}>My Reviews</MenuItem>
             </Menu>
             </SidebarContent>
 
-            <SidebarFooter>
-                <p style={{color: "#8E8D8D", marginLeft: "20px", fontSize: "12px"}}>copyright@2022 <br /> Masaail.com</p>
+            <SidebarFooter className='sidebar-footer'>
+                <p className='para'>copyright@2022 <br /> Masaail.com</p>
             </SidebarFooter>
         </ProSidebar>
-        <div>
-            createpost
+        <div className='main-content'>
+            <h3 style={{color: "black"}}>Main content here</h3>
         </div>
         </>
     )

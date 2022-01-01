@@ -1,0 +1,30 @@
+.pro-sidebar {
+    float: left;
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0rem;
+}
+
+.pro-sidebar h1 {
+    text-align: center;
+}
+
+.pro-sidebar .menu-item {
+    margin-left: 40px;
+}
+
+.sidebar-footer .para{
+    color: #8E8D8D;
+    margin-left: 20px;
+    font-size: 12px
+}
+
+.main-content {
+    width: auto;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
