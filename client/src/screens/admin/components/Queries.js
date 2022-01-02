@@ -13,7 +13,7 @@ import { FaQuestionCircle, FaMoneyBillWave } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
 import "../../react-pro-sidebar.css";
-const Chats = () => {
+const Queries = () => {
   return (
     <div>
       <ProSidebar className="pro-sidebar">
@@ -43,7 +43,7 @@ const Chats = () => {
 
             <MenuItem icon={<FaQuestionCircle />}>
               Queries
-              <Link to="/admin/chats" />
+              <Link to="/admin/queries" />
             </MenuItem>
           </Menu>
         </SidebarContent>
@@ -56,7 +56,7 @@ const Chats = () => {
       </ProSidebar>
 
      <div className="main-content overflow-auto">
-        <table class="table table-hover">
+        <table className="table table-hover">
             <thead>
               <tr>
                 <td>#</td>
@@ -87,4 +87,4 @@ const Chats = () => {
   );
 };
 
-export default Chats;
+export default Queries;

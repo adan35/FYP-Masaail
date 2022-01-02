@@ -43,7 +43,7 @@ const Reviewers = () => {
 
               <MenuItem icon={<FaQuestionCircle />}>
                 Queries
-                <Link to="/admin/chats" />
+                <Link to="/admin/queries" />
               </MenuItem>
             </Menu>
           </SidebarContent>
