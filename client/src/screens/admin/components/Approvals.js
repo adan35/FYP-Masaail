@@ -1,11 +1,44 @@
-import React from 'react'
-
+import React from "react";
+import { Link } from "react-router-dom";
+import AdminSidebar from "./AdminSidebar";
 const Approvals = () => {
-    return (
-        <div>
-            approvals
+  return (
+    <div>
+      
+      <AdminSidebar />
+
+      <div className="main-content">
+          <table className="table table-hover">
+            <thead>
+              <tr>
+                <td>#</td>
+                <td>Name</td>
+                <td>Location</td>
+                <td>Post</td>
+                <td>Approve</td>
+                <td>Delete</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>ABC</td>
+                <td>XYZ</td>
+                <td>
+                  <Link to="#">See Post</Link>
+                </td>
+                <td>
+                  <button className="btn btn-success">Approve</button>
+                </td>
+                <td>
+                  <button className="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-    )
-}
+      </div>
+  );
+};
 
 export default Approvals;

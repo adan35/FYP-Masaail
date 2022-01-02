@@ -1,9 +1,7 @@
 import Approvals from "./Approvals";
 import Dashboard from "./Dashboard";
-import List from "./List";
-import Profile from "./Profile";
-import ReactedReviews from "./ReactedReviews";
-import Reviews from "./Reviews";
-import Chat from './Chats';
+import Queries from "./Queries";
+import Investors from "./Investors";
+import Reviewers from "./Reviewers";
 
-export { Approvals, Dashboard, List, Profile, ReactedReviews, Reviews, Chat };
+export { Approvals, Dashboard, Queries, Investors, Reviewers};
