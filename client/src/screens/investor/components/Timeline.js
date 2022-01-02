@@ -1,4 +1,10 @@
 import React from 'react'
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import img1 from "../../../assets/img/1.jpg";
+import img2 from "../../../assets/img/2.jpg";
+import img3 from "../../../assets/img/3.jpg";
 
 const Timeline = () => {
     return (
@@ -22,6 +28,19 @@ const Timeline = () => {
                     <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius feugiat velit, at finibus leo dignissim ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis auctor condimentum tortor, et viverra turpis bibendum non. Cras id orci elementum, hendrerit ligula vel, pharetra enim. Vivamus metus sapien, cursus eget mollis eu, feugiat
                     </p>
+                </div>
+                <div>
+                <Carousel>
+                    <div>
+                        <img src={img1} />
+                    </div>
+                    <div>
+                        <img src={img2} />
+                    </div>
+                    <div>
+                        <img src={img3} />
+                    </div>
+                </Carousel>
                 </div>
                 <div className='row'>
                     <div className='col'>
