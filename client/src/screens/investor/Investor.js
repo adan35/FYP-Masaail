@@ -23,12 +23,22 @@ const Investor = (params) => {
                     </div>
                 </div>
             </div>
-            <Switch>
-                <Route exact path="/investor" component={Timeline} />
-                <Route exact path="/investor/chatbox" component={ChatBox} />
-                <Route exact path="/investor/createpoll" component={CreatePoll} />
-                <Route exact path="/investor/mypolls" component={MyPolls} />
-            </Switch>
+            <div className='row mt-4'>
+            <div className='col-md-2'>
+                <button className='btn post-btn'><i class="fas fa-pen-square"></i>Create Post</button>
+                <button className='btn post-btn'><i class="fas fa-home"></i>Timeline</button>
+                <button className='btn post-btn'><i class="fas fa-clipboard-list"></i>My Reviews</button>
+            </div>
+            <div className='col'>
+                <Switch>
+                    <Route exact path="/investor" component={Timeline} />
+                    <Route exact path="/investor/chatbox" component={ChatBox} />
+                    <Route exact path="/investor/createpoll" component={CreatePoll} />
+                    <Route exact path="/investor/mypolls" component={MyPolls} />
+                </Switch>
+            </div>
+            <div className='col'></div>
+            </div>
         </div>
     );
 }
