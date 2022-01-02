@@ -17,7 +17,7 @@ const Dashboard = () => {
                 <ul className="list-unstyled">
                   <li>
                     <div className="container">
-                      <div className="card">
+                      <div className="card admin-card">
                         <img
                           src="https://cdn.pixabay.com/photo/2014/04/02/10/12/checkbox-303113_960_720.png"
                           className="card-img-top img"
@@ -35,7 +35,7 @@ const Dashboard = () => {
                           </p>
 
                           <center>
-                            <Link to="/admin/approvals" className="btn button">
+                            <Link to="/admin/approvals" className="btn admin-card-button">
                               Approve Posts
                             </Link>
                           </center>
@@ -52,7 +52,7 @@ const Dashboard = () => {
               <ul className="list-unstyled">
                 <li>
                   <div className="container">
-                    <div className="card">
+                    <div className="card admin-card">
                       <img
                         src="https://cdn-icons-png.flaticon.com/512/942/942751.png"
                         className="card-img-top img"
@@ -70,7 +70,7 @@ const Dashboard = () => {
                         </p>
 
                         <center>
-                          <Link to="/admin/queries" className="btn button">
+                          <Link to="/admin/queries" className="btn admin-card-button">
                             Queries
                           </Link>
                         </center>

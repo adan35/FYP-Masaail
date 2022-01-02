@@ -7,7 +7,7 @@
   padding: 30px;
 }
 
-.card{
+.admin-card{
   width: 20rem;
   border-top-right-radius: 10px 10px;
   border-top-left-radius: 50px 50px;
@@ -23,7 +23,7 @@
   height: 128px;;
 }
 
-.button{
+.admin-card-button{
   transition: 0.8s ease;
   background-color: #0082FE;
   color: #fff;
@@ -31,7 +31,7 @@
   border-radius: 2rem;
 }
 
-.button:hover{
+.admin-card-button:hover{
   transition: 0.8s ease;
   border-color: #0082FE;
   background-color: #fff;
