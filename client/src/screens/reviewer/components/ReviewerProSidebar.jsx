@@ -15,14 +15,14 @@ export default function ReviewerProSidebar() {
 
                 <SidebarContent>
                 <Menu iconShape="square">
-                    <MenuItem icon={<IoIosCreate />}>
+                    <MenuItem active={window.location.pathname === "/reviewer/createpost"} icon={<IoIosCreate />}>
                         Create Post
                         <Link to="/reviewer/createpost" /></MenuItem>
-                    <MenuItem icon={<MdTimeline />}>
+                    <MenuItem active={window.location.pathname === "/reviewer"} icon={<MdTimeline />}>
                         Timeline
                         <Link to="/reviewer" /></MenuItem>
 
-                    <MenuItem icon={<MdReviews />}>
+                    <MenuItem active={window.location.pathname === "/reviewer/myposts"} icon={<MdReviews />}>
                         My Posts
                         <Link to="/reviewer/myposts" /></MenuItem>
                 </Menu>
