@@ -18,7 +18,7 @@ const OTP = () => {
         <>
             <div className="container">
                 <div className="row card">
-                    <div className="col text-center">
+                    <div className="col text-center otp">
                         <h2>Verify OTP</h2>
                         <p>Enter the OTP sent to you to verify your identity</p>
 

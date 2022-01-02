@@ -1,13 +1,13 @@
 /* OTP PAGE */
-h2 {
-  color: #0047AB;
+.otp h2 {
+  color: #1d1d1d;
   margin-bottom: 30px;
 }
-p {
-  color: #2e2e2e;
+.otp p {
+  color: #1d1d1d;
 }
-p {
-  color: #0047AB;
+.otp p {
+  color: #1d1d1d;
 }
 .container {
   display: flex;
@@ -27,23 +27,23 @@ p {
 }
 
 .btn-primary {
-  background: #0047AB;
-  color: #ffffff;
-  border-color: #0047AB;
+  background: #1d1d1d;
+  color: #adadad;
+  border-color: #1d1d1d;
 }
 .btn-primary:hover {
   background: transparent;
-  color: #0047AB;
+  color: #1d1d1d;
 }
 .btn-secondary {
-  background: #0047AB;
-  color: #ffffff;
+  background: #1d1d1d;
+  color: #adadad;
   border-color: none;
   margin-right: 20px;
 }
 .btn-secondary:hover {
-  background: #0047AB;
-  color: #ffffff;
+  background: #1d1d1d;
+  color: #adadad;
 }
 .otp-field {
   display: inline-block;
@@ -51,13 +51,13 @@ p {
   height: 50px;
   text-align: center;
   margin-right: 5px;
-  border: 2px solid #0047AB;
+  border: 2px solid #1d1d1d;
   margin-bottom: 15px;
 }
 .otp-field:focus {
   text-decoration: none;
-  background-color: #ffffff;
-  border-color: #0047AB;
+  background-color: #adadad;
+  border-color: #1d1d1d;
   outline: 0;
   box-shadow: none;
 }
@@ -70,7 +70,7 @@ p {
   border-radius: 500px;
   transition-property: background-color, border-color, color, box-shadow, filter;
   transition-duration: 0.3s;
-  border: 3px solid #0047AB;
+  border: 3px solid #1d1d1d;
   letter-spacing: 2px;
   min-width: 140px;
   text-transform: uppercase;
@@ -78,15 +78,15 @@ p {
   font-weight: 700;
   text-align: center;
   padding: 16px 14px 18px;
-  color: #616467;
+  color: #adadad;
   box-shadow: inset 0 0 0 2px none;
   background-color: transparent;
   height: 48px;
   margin-right: 10px;
 }
 .button:hover {
-  color: #fff;
-  background-color: #0047AB;
+  color: #adadad;
+  background-color: #1d1d1d;
   border: none;
 }
 .buttonClear {
@@ -98,7 +98,7 @@ p {
   border-radius: 500px;
   transition-property: background-color, border-color, color, box-shadow, filter;
   transition-duration: 0.3s;
-  border: 3px solid #0047AB;
+  border: 3px solid #1d1d1d;
   letter-spacing: 2px;
   min-width: 140px;
   text-transform: uppercase;
@@ -106,22 +106,22 @@ p {
   font-weight: 700;
   text-align: center;
   padding: 16px 14px 18px;
-  color: #ffffff;
+  color: #adadad;
   box-shadow: inset 0 0 0 2px none;
-  background-color: #0047AB;
+  background-color: #1d1d1d;
   height: 48px;
   margin-right: 10px;
   margin-bottom: 10px;
 }
 .buttonClear:hover {
-  color: #fff;
+  color: #adadad;
   background-color: transparent;
-  border: 3px solid #0047AB;
-  color: #0047AB;
+  border: 3px solid #1d1d1d;
+  color: #1d1d1d;
 }
 /* Forgot */
 .text-email {
-  color: #0047AB;
+  color: #1d1d1d;
 }
 .email-forgot {
   width: 300px;
@@ -136,25 +136,25 @@ p {
   height: 50px;
   padding-left: 10px;
   margin-right: 5px;
-  border: 3px solid #0047AB;
+  border: 3px solid #1d1d1d;
   border-radius: 5px;
   margin-bottom: 15px;
   background-color: transparent;
   margin-right: 10px;
-  color: #0047AB;
+  color: #1d1d1d;
   font-weight: bold;
   margin-bottom: 30px;
 }
 .input-email:focus {
   background-color: transparent;
-  border-color: #0047AB;
+  border-color: #1d1d1d;
   outline: 0;
   box-shadow: none;
-  color: #0047AB;
+  color: #1d1d1d;
   font-weight: 500;
 }
 .btn-send {
-  background-color: #0047AB;
+  background-color: #1d1d1d;
   display: inline-block;
   outline: none;
   cursor: pointer;
@@ -163,7 +163,7 @@ p {
   border-radius: 3px;
   transition-property: background-color, border-color, color, box-shadow, filter;
   transition-duration: 0.3s;
-  border: 3px solid #0047AB;
+  border: 3px solid #1d1d1d;
   letter-spacing: 2px;
   min-width: 140px;
   font-weight: 600;
@@ -171,23 +171,23 @@ p {
   font-weight: 700;
   text-align: center;
   padding: auto;
-  color: #ffffff;
+  color: #adadad;
   box-shadow: inset 0 0 0 2px none;
-  background-color: #0047AB;
+  background-color: #1d1d1d;
   height: 40px;
   margin-right: 10px;
   margin-bottom: 10px;
 }
 .btn-send:hover {
   background-color: transparent;
-  border: 3px solid #0047AB;
-  color: #fff;
-  color: #0047AB;
+  border: 3px solid #1d1d1d;
+  color: #adadad;
+  color: #1d1d1d;
 }
 .btn-send:focus {
-  color: #fff;
+  color: #adadad;
   background-color: transparent;
-  border: 3px solid #0047AB;
-  color: #0047AB;
+  border: 3px solid #1d1d1d;
+  color: #1d1d1d;
   box-shadow: transparent;
 }
