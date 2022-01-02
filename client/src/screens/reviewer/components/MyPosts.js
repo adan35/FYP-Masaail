@@ -1,10 +1,10 @@
 import React from 'react'
-import ReviewerProSidebar from "./ReviewerProSidebar";
+import ReviewerSidebar from "./ReviewerSidebar";
 
 const MyPosts = () => {
     return (
         <>
-            <ReviewerProSidebar />
+            <ReviewerSidebar />
             <div className='main-content'>
                 <h3 style={{color: "black"}}>Main content here of My Posts</h3>
             </div>
