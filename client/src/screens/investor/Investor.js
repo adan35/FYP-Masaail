@@ -24,7 +24,7 @@ const Investor = (params) => {
                 </div>
             </div>
             <div className='row mt-4'>
-            <div className='col-md-2'>
+            <div className='col-md-3'>
                 <button className='btn post-btn'><i class="fas fa-pen-square"></i>Create Post</button>
                 <button className='btn post-btn'><i class="fas fa-home"></i>Timeline</button>
                 <button className='btn post-btn'><i class="fas fa-clipboard-list"></i>My Reviews</button>
@@ -37,7 +37,21 @@ const Investor = (params) => {
                     <Route exact path="/investor/mypolls" component={MyPolls} />
                 </Switch>
             </div>
-            <div className='col'></div>
+            <div className='col-md-3'>
+                <h4>Hot Topics</h4>
+                <div className='hot-topic'>
+                    <h4>Lorem Ipsum</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div className='hot-topic'>
+                    <h4>Lorem Ipsum</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div className='hot-topic'>
+                    <h4>Lorem Ipsum</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
             </div>
         </div>
     );
