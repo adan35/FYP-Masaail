@@ -1,0 +1,52 @@
+.row{
+    margin: 0;
+    padding: 0;
+}
+
+
+.title{
+    background-color: #E040FB;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.title .text{
+    font-size: 18px;
+    color: white;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+    border-radius: 50px;
+}
+
+.has-search .form-control-feedback {
+    padding-left: 10px;
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.profile{
+    margin-right: 20px;
+}
+
+.profile i{
+    padding-top: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #E040FB;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 20px;
+    color: white;
+}
