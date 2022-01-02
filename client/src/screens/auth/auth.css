@@ -348,7 +348,7 @@ a {
 }
 
 .home_container {
-  width: 90%;
+  width: auto;
   height: auto;
   margin-left: auto;
   margin-top: 100px;

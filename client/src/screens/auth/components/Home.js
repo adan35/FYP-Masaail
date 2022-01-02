@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import '../auth.css';
 const Home = () => {
     return (
-        <div className="home_container">
+        <div className="d-flex justify-content-center p-4">
           
-          <header>
+         <div className='home_container'>
+         <header>
             <div className="primary-color home_logo">
               <h2>MASAAIL.com</h2>
             </div>
@@ -17,11 +18,16 @@ const Home = () => {
           <main className="main_body">
             <h4 className="primary-color">Are You ?</h4>
             <div className="buttons_container">
-              <button className="btn">Reviewer</button>
-              <button className="btn">Investor</button>
+              <Link to="/auth/signup">
+                <button className="btn">Reviewer</button>
+              </Link>
+              <Link to="/auth/signup">
+                <button className="btn">Investor</button>
+              </Link>
             </div>
             <p className="already_registered">Already Registered? <Link to="#">Login</Link></p>
           </main>
+         </div>
     
     
         </div>
