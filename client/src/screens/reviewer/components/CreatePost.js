@@ -5,7 +5,6 @@ const CreatePost = () => {
 
     return (
         <>
-            <ReviewerSidebar />
             <div className='main-content'>
                 <h3 style={{color: "black"}}>Main content here of Create Post</h3>
             </div>

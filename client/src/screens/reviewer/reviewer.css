@@ -1,0 +1,140 @@
+.row{
+    margin: 0;
+    padding: 0;
+}
+
+
+.title{
+    background-color: #E040FB;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.title .text{
+    font-size: 18px;
+    color: white;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+    border-radius: 50px;
+}
+
+.has-search .form-control-feedback {
+    padding-left: 10px;
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.profile{
+    margin-right: 20px;
+}
+
+.profile i{
+    padding-top: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #E040FB;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 20px;
+    color: white;
+}
+
+.post-btn{
+    background-color: #E040FB;
+    color: white;
+    margin-left: 10px;
+    border-radius: 50px;
+    width: 180px;
+    height: 40px;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.post-btn i{
+    margin-right: 10px;
+}
+
+.post{
+    width: 600px;
+    padding: 20px;
+    border: 3px solid #E040FB;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.post h4{
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.post h5{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.hot-topic{
+    width: 250px;
+    height: 100px;
+    background-color: rgb(218, 218, 218);
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.hot-topic h4{
+    font-size: 18px;
+    margin: 5px;
+    color: #E040FB;
+}
+
+.hot-topic p{
+    font-size: 14px;
+    margin-left: 10px;
+    color: #3b3b3b;
+}
+
+.profile-img{
+    width: 60px;
+}
+
+.profile-img .img{
+    height: 50px;
+    width: 50px;
+    background-color: #8d8d8d;
+    border-radius: 50px;
+}
+
+.profile-img .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.post p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.post i {
+    color: #8d8d8d;
+    font-size: 20px;
+    margin: 5px;
+}

@@ -1,5 +1,5 @@
 import { ChatBox, CreatePoll, MyPolls, Timeline } from './components';
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import "./investor.css";
 
 const Investor = (params) => {
@@ -27,9 +27,15 @@ const Investor = (params) => {
             </div>
             <div className='row mt-4'>
                 <div className='col-md-3'>
-                    <button className='btn post-btn'><i class="fas fa-pen-square"></i>Create Post</button>
-                    <button className='btn post-btn'><i class="fas fa-home"></i>Timeline</button>
-                    <button className='btn post-btn'><i class="fas fa-clipboard-list"></i>My Reviews</button>
+                    <Link to="/investor/createpoll">
+                        <button className='btn post-btn'><i class="fas fa-clipboard-list"></i>Create Poll</button>
+                    </Link>
+                    <Link to="/investor/mypolls">
+                        <button className='btn post-btn'><i class="fas fa-poll"></i>My Polls</button>
+                    </Link>
+                    <Link to="/investor">
+                        <button className='btn post-btn'><i class="fas fa-plus-square"></i>Public Reviews</button>
+                    </Link>
                 </div>
                 <div className='col'>
                     <Switch>
