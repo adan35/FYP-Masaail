@@ -18,7 +18,7 @@ const Signin = () => {
             <form className="form1">
               <input className="un " type="text" align="center" placeholder="Username" />
               <input className="pass" type="password" align="center" placeholder="Password" />
-              <Link className="submit" align="center" to="#">Sign in</Link>
+              <Link className="submit" align="center" to="/investor">Sign in</Link>
               <p className="forgot" align="center"><Link to="/auth/forgot">Forgot Password?</Link></p>
               <p className="signup">Don't have an account? <Link to="/auth/signup">Signup</Link></p>
             </form>                      

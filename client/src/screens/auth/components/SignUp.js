@@ -97,7 +97,7 @@ const SignUp = () => {
             <button type="button" class="submit-signup">Sign Up</button>
            </div>
            <br/>
-           <p class="linkl text-center " >Already Registered? <a href=""  > Login</a> </p>
+           <p class="linkl text-center " >Already Registered? <Link to="/auth/signin"  > Login</Link> </p>
         </div>
             </form>                      
           </div>
