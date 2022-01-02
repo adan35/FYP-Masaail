@@ -204,6 +204,15 @@ body {
   box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
 }
 
+.main-sign {
+  background-color: #FFFFFF;
+  width: 800px;
+  height: 800px;
+  margin: 10em auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
 .sign {
   padding-top: 40px;
   color: #8C55AA;
@@ -277,6 +286,21 @@ cursor: pointer;
   font-size: 13px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
 }
+
+.submit-signup {
+  cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #9C27B0, #E040FB);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  }
 
 .forgot {
   text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
@@ -372,4 +396,48 @@ a {
   .main {
       border-radius: 0px;
   }
+}
+
+
+.custom-file-upload{
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: black;
+  background-color: #E040FB;
+
+}
+.img1{
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.signupbtn{
+  display: flex;
+justify-content: center;
+align-items: center;
+color:#E040FB;;
+
+
+}
+input:hover{
+  background-color:rgb(240, 208, 255);
+}
+label{
+font-weight: bold;
+color:#E040FB;;
+font-family: "Lucida Console", "Courier New", monospace;
+
+}
+
+.form-control{
+  border: 2px solid #E040FB;;
+  border-radius: 7px;
+
+}
+button{
+
+  background-color:rgb(167, 17, 67);
 }
