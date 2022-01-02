@@ -1,43 +1,90 @@
 import React from "react";
-
+import {
+  ProSidebar,
+  Menu,
+  MenuItem,
+  SidebarHeader,
+  SidebarFooter,
+  SidebarContent,
+} from "react-pro-sidebar";
+import { IoIosCreate } from "react-icons/io";
+import { MdTimeline, MdReviews, MdPending, MdHome } from "react-icons/md";
+import { FaQuestionCircle, FaMoneyBillWave } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import "react-pro-sidebar/dist/css/styles.css";
+import "../../react-pro-sidebar.css";
 const Approvals = () => {
   return (
-    <body className="Approvals">
-      <div>
-        <div className="container1">
-          <div className="listview1">
-            <table id="list-pending">
+    <div>
+      <ProSidebar className="pro-sidebar">
+        <SidebarHeader>
+          <h1>Masaail</h1>
+        </SidebarHeader>
+
+        <SidebarContent>
+          <Menu iconShape="square">
+            <MenuItem icon={<MdHome />}>
+              Dashboard
+              <Link to="/admin/" />
+            </MenuItem>
+            <MenuItem icon={<MdPending />}>
+              Approvals
+              <Link to="/admin/approvals" />
+            </MenuItem>
+            <MenuItem icon={<MdReviews />}>
+              Reviewers
+              <Link to="/admin/reviewers" />
+            </MenuItem>
+
+            <MenuItem icon={<FaMoneyBillWave />}>
+              Investors
+              <Link to="/admin/investors" />
+            </MenuItem>
+
+            <MenuItem icon={<FaQuestionCircle />}>
+              Queries
+              <Link to="/admin/chats" />
+            </MenuItem>
+          </Menu>
+        </SidebarContent>
+
+        <SidebarFooter className="sidebar-footer">
+          <p className="para">
+            copyright@2022 <br /> Masaail.com
+          </p>
+        </SidebarFooter>
+      </ProSidebar>
+      <div className="main-content">
+          <table class="table table-hover">
+            <thead>
               <tr>
+                <td>#</td>
+                <td>Name</td>
+                <td>Location</td>
+                <td>Post</td>
+                <td>Approve</td>
+                <td>Delete</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>ABC</td>
+                <td>XYZ</td>
                 <td>
-                  <div className="circle-list">
-                    <h5 className="idNumber">1</h5>
-                  </div>
+                  <a href="#">See Post</a>
                 </td>
                 <td>
-                  <h5 className="name">Muhammad Ghyas</h5>
+                  <button className="btn btn-success">Approve</button>
                 </td>
                 <td>
-                  <h5 className="dsgn">Reviewer</h5>
-                </td>
-                <td>
-                  <h5 className="city">Lahore, Pakistan</h5>
-                </td>
-                <td>
-                  <a href="#" className="see-post">
-                    See Posting
-                  </a>
-                </td>
-                <td className="button-approve">
-                  <button className="approve-btn button">Approve</button>
-                  <button className="delete-btn button">Delete</button>
-                
+                  <button className="btn btn-danger">Delete</button>
                 </td>
               </tr>
-            </table>
-          </div>
+            </tbody>
+          </table>
         </div>
       </div>
-    </body>
   );
 };
 
