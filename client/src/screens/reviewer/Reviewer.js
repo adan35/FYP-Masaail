@@ -1,5 +1,5 @@
 import { CreatePost, MyPosts, Timeline } from "./components";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import "./reviewer.css";
 
 const Reviewer = (params) => {
@@ -27,9 +27,15 @@ const Reviewer = (params) => {
             </div>
             <div className='row mt-4'>
                 <div className='col-md-3'>
-                    <button className='btn post-btn'><i class="fas fa-pen-square"></i>Create Post</button>
-                    <button className='btn post-btn'><i class="fas fa-home"></i>Timeline</button>
-                    <button className='btn post-btn'><i class="fas fa-clipboard-list"></i>My Reviews</button>
+                    <Link to="/reviewer/createpost">
+                        <button className='btn post-btn'><i class="fas fa-pen-square"></i>Create Post</button>
+                    </Link>
+                    <Link to="/reviewer">
+                        <button className='btn post-btn'><i class="fas fa-home"></i>Timeline</button>
+                    </Link>
+                    <Link to="/reviewer/myposts">
+                        <button className='btn post-btn'><i class="fas fa-clipboard-list"></i>My Reviews</button>
+                    </Link>
                 </div>
                 <div className='col'>
                 <Switch>
