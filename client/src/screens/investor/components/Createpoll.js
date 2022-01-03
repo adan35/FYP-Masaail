@@ -30,7 +30,10 @@ const CreatePoll = () => {
         <div>
             <div className='col-md-10 create-post'>
                 <div className='create mt-4'>
+                    <input className='mt-3 tags-input' placeholder='Title'/>
+                    <div className='mt-2'>
                     {tags.map((tag) => <span className="tag">{tag}</span>)}
+                    </div>
                     <input className='mt-3 tags-input'
                     value={input}
                     placeholder="Write Poll Name and Press Enter"
