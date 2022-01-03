@@ -171,3 +171,26 @@
 .create-post button{
     height: 35px;
 }
+
+.create-post .tags-input{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.create-post .tags-input:focus{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+}
+
+.create-post .tag{
+    background-color: #8d8d8d;
+    color: white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
