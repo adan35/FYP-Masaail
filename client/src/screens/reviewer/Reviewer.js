@@ -1,6 +1,7 @@
 import { CreatePost, MyPosts, Timeline } from "./components";
 import { Switch, Route, Link } from "react-router-dom";
 import "./reviewer.css";
+import Polls from "../shared/polls";
 
 const Reviewer = (params) => {
     return (
@@ -36,12 +37,16 @@ const Reviewer = (params) => {
                     <Link to="/reviewer">
                         <button className='btn post-btn'><i class="fas fa-clipboard-list"></i>My Reviews</button>
                     </Link>
+                    <Link to="/investor/polls">
+                        <button className='btn post-btn'><i class="fas fa-clipboard-list"></i>View Polls</button>
+                    </Link>
                 </div>
                 <div className='col'>
                 <Switch>
                     <Route exact path="/reviewer" component={Timeline}/>
                     <Route exact path="/reviewer/createpost" component={CreatePost}/>
                     <Route exact path="/reviewer/myposts" component={MyPosts}/>
+                        <Route exact path="/reviewer/polls" component={Polls} />
                 </Switch>
                 </div>
                 <div className='col-md-3'>

@@ -9,6 +9,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
+    "react-polls": "^1.2.0",
     "react-pro-sidebar": "^0.7.1",
     "react-responsive-carousel": "^3.2.22",
     "react-router-dom": "^5.3.0",
