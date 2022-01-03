@@ -33,7 +33,7 @@ const Reviewer = (params) => {
                     <Link to="/reviewer">
                         <button className='btn post-btn'><i class="fas fa-home"></i>Timeline</button>
                     </Link>
-                    <Link to="/reviewer/myposts">
+                    <Link to="/reviewer">
                         <button className='btn post-btn'><i class="fas fa-clipboard-list"></i>My Reviews</button>
                     </Link>
                 </div>
