@@ -19,7 +19,7 @@ const AdminSidebar = () => {
       <SidebarHeader className="row sidebarbox">
         <div className="col-md-12">
           <div className="container-fluid masaail">
-            <h3>Masaail</h3>
+            <h3 className="headingM">Masaail</h3>
           </div>
         </div>
       </SidebarHeader>

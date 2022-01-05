@@ -4,6 +4,15 @@
 .mainBody{
   background-color: #E6E6E6;
 }
+.mainBody .approvaltable td .seePost{
+  color:#14279B !important;
+  text-decoration: underline;
+}
+
+.mainBody .approvaltable td .seePost:hover{
+  color:#3D56B2 !important;
+  
+}
 .button, .card-text, card-title{
   font-family: 'Open Sans', sans-serif;
 }
@@ -15,14 +24,16 @@
   padding-left: 60px;
   padding-top:10px;
 }
-
+.headingM{
+  color:#E6E6E6;
+}
 .sidebarbox{
   background-color: #3D56B2;
 }
 .sidebarmenu{
   background-color:#3D56B2;
-  color: rgb(253, 211, 211);
 }
+
 
 .admin-card{
   width: 20rem;
@@ -63,6 +74,7 @@
   font-size: 14px;
 }
 .para{
+  color: #E6E6E6 !important;
   padding-top: 10px;;
 }
 

@@ -25,7 +25,7 @@ const Approvals = () => {
                 <td>ABC</td>
                 <td>XYZ</td>
                 <td>
-                  <Link to="#">See Post</Link>
+                  <Link to="#" className="seePost">See Post</Link>
                 </td>
                 <td>
                   <button className="btn-success">Approve</button>
