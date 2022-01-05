@@ -138,3 +138,13 @@
     font-size: 20px;
     margin: 5px;
 }
+
+
+.dummyClass{
+    display: none;
+    color: #14279B;
+    color: #3D56B2;
+    color: #5C7AEA;
+    color: #E6E6E6;
+  
+  }

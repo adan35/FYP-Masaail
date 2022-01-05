@@ -1,10 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+
+.mainBody{
+  background-color: #E6E6E6;
+}
 .button, .card-text, card-title{
   font-family: 'Open Sans', sans-serif;
 }
 .container{
-  padding: 30px;
+  padding: 60px;
+}
+.pro-sidebar .masaail{
+  margin: auto;
+  padding-left: 60px;
+  padding-top:10px;
+}
+
+.sidebarbox{
+  background-color: #3D56B2;
+}
+.sidebarmenu{
+  background-color:#3D56B2;
+  color: rgb(253, 211, 211);
 }
 
 .admin-card{
@@ -13,7 +30,7 @@
   border-top-left-radius: 50px 50px;
   border-bottom-left-radius: 5px 5px;
   border-bottom-right-radius: 50px 50px;
-  box-shadow: 2px 2px 15px 2px #ccc;
+  box-shadow: 2px 2px 15px 2px #5C7AEA;
 }
 
 .img{
@@ -24,24 +41,47 @@
 }
 
 .admin-card-button{
+  margin-top: 30px;
   transition: 0.8s ease;
-  background-color: #0082FE;
-  color: #fff;
+  background-color: #14279B;
+  color: #E6E6E6;
   font-size: 14px;
   border-radius: 2rem;
+  border: none;
+
 }
 
+.myP{
+  height: 100px;
+}
 .admin-card-button:hover{
   transition: 0.8s ease;
-  border-color: #0082FE;
-  background-color: #fff;
-  color: #0082FE;
+  border:1px;
+  border-color: #3D56B2;
+  background-color: #cfcfcf;
+  color: #3D56B2;
   font-size: 14px;
 }
+.para{
+  padding-top: 10px;;
+}
 
+.dummyClass{
+  display: none;
+  color: #14279B;
+  color: #3D56B2;
+  color: #5C7AEA;
+  color: #E6E6E6;
+
+}
 
 
 /* approvals */
 
-
+.approvaltable{
+  background-color: #ffffff;
+}
+.approvaltable td{
+  color: #14279B;
+}
 

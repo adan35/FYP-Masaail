@@ -7,8 +7,8 @@ const Approvals = () => {
       
       <AdminSidebar />
 
-      <div className="main-content">
-          <table className="table table-hover">
+      <div className="main-content mainBody">
+          <table className="table table-hover approvaltable">
             <thead>
               <tr>
                 <td>#</td>
@@ -28,10 +28,10 @@ const Approvals = () => {
                   <Link to="#">See Post</Link>
                 </td>
                 <td>
-                  <button className="btn btn-success">Approve</button>
+                  <button className="btn-success">Approve</button>
                 </td>
                 <td>
-                  <button className="btn btn-danger">Delete</button>
+                  <button className="btn-danger">Delete</button>
                 </td>
               </tr>
             </tbody>

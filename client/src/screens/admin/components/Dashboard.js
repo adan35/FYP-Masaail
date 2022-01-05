@@ -8,7 +8,7 @@ const Dashboard = () => {
         
         <AdminSidebar />
         
-        <div className="main-content">
+        <div className="main-content mainBody">
             <div className="row">
           <div className="col-md-1"></div>
           <div className="col-md-4">
@@ -29,11 +29,11 @@ const Dashboard = () => {
                             <h5 className="card-title">Approvals</h5>
                           </center>
 
-                          <p className="card-text">
+                          <p className="card-text myP">
                            50 Posts are pending for approvals.
-                           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown p
+                           
                           </p>
-
+ 
                           <center>
                             <Link to="/admin/approvals" className="btn admin-card-button">
                               Approve Posts
@@ -64,13 +64,13 @@ const Dashboard = () => {
                           <h5 className="card-title">Queries</h5>
                         </center>
 
-                        <p className="card-text">
+                        <p className="card-text myP" >
                             50 queries are pending to be answered.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer too
+                       
                         </p>
 
                         <center>
-                          <Link to="/admin/queries" className="btn admin-card-button">
+                          <Link to="/admin/queries" className="btn admin-card-button approvB">
                             Queries
                           </Link>
                         </center>

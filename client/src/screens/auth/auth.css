@@ -61,34 +61,7 @@
   outline: 0;
   box-shadow: none;
 }
-.button {
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
-  font-size: 14px;
-  line-height: 1;
-  border-radius: 500px;
-  transition-property: background-color, border-color, color, box-shadow, filter;
-  transition-duration: 0.3s;
-  border: 3px solid #1d1d1d;
-  letter-spacing: 2px;
-  min-width: 140px;
-  text-transform: uppercase;
-  white-space: normal;
-  font-weight: 700;
-  text-align: center;
-  padding: 16px 14px 18px;
-  color: #adadad;
-  box-shadow: inset 0 0 0 2px none;
-  background-color: transparent;
-  height: 48px;
-  margin-right: 10px;
-}
-.button:hover {
-  color: #adadad;
-  background-color: #1d1d1d;
-  border: none;
-}
+
 .buttonClear {
   display: inline-block;
   outline: none;
@@ -193,10 +166,6 @@
 }
 
 /* homepage and loginpage */
-body {
-  background-color: white;
-  font-family: 'Ubuntu', sans-serif;
-}
 
 .main {
   background-color: #FFFFFF;
@@ -441,7 +410,13 @@ font-family: "Lucida Console", "Courier New", monospace;
   border-radius: 7px;
 
 }
-button{
 
-  background-color:rgb(167, 17, 67);
+
+.dummyClass{
+  display: none;
+  color: #14279B;
+  color: #3D56B2;
+  color: #5C7AEA;
+  color: #E6E6E6;
+
 }
