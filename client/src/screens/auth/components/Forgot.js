@@ -1,28 +1,47 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "../auth.css";
 
 const Forgot = () => {
-  return (
-    <>
-      <div className="container">
-        <div className="row card">
-          <div className="col text-center">
-            <h2>Enter Your Email</h2>
-            <form action="./otp">
-            <span>
-              <input
-                className="input-email"
-                id="email"
-                type="text"
-                placeholder="masail@gmail.com"
-              />
-            </span>
-              <button className="btn-send">Send</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+	return (
+		<>
+			<div className="background">
+				<div className="row siginPage">
+					<div className="col-md-3">
+						<div className="headerlogo">
+							<h3>masaail.com</h3>
+						</div>
+					</div>
+					<div className="col-md-6">
+						<div className="container-fluid sigin-card">
+							<div className="signin-form">
+                <p>Enter your email to get OTP</p>
+								<form>
+									<div className="form-group">
+										<label>Email address</label>
+										<input
+											type="email"
+											className="form-control"
+											placeholder="Email"
+											required
+										/>
+									</div>
+									<div className="buttonSignup">
+										<Link type="submit" to="/auth/otp">
+											<button type="submit" className="btn signupbtn">
+												Send
+											</button>
+										</Link>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3"></div>
+				</div>
+			</div>
+		</>
+	);
 };
 
 export default Forgot;

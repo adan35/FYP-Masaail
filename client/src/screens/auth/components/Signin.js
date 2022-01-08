@@ -1,30 +1,61 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
-import '../auth.css';
+import "../auth.css";
 const Signin = () => {
-    return (
-        <div>
-          <header>
-            <div className="logo">
-              <h3>MASAAIL.com</h3>
-            </div>
-            <div className="login_text">
-              <p>Login</p>
-            </div>
-          </header>
-    
-          <div className="main">
-            <p className="sign" align="center">Sign in</p>
-            <form className="form1">
-              <input className="un " type="text" align="center" placeholder="Username" />
-              <input className="pass" type="password" align="center" placeholder="Password" />
-              <Link className="submit" align="center" to="/investor">Sign in</Link>
-              <p className="forgot" align="center"><Link to="/auth/forgot">Forgot Password?</Link></p>
-              <p className="signup">Don't have an account? <Link to="/auth/signup">Signup</Link></p>
-            </form>                      
-          </div>
-        </div>
-      );
-}
+	return (
+		<div className="background">
+			<div className="row siginPage">
+				<div className="col-md-4">
+					<div className="headerlogo">
+						<h3>masaail.com</h3>
+					</div>
+				</div>
+				<div className="col-md-4">
+					<div className="container-fluid sigin-card">
+						<div className="signin-form">
+							<div className="card-header">
+								<h3>Sign In</h3>
+							</div>
+							<form>
+								<div className="form-group">
+									<label>Email address</label>
+									<input
+										type="email"
+										className="form-control"
+										placeholder="Email" required
+									/>
+								</div>
+								<div className="form-group">
+									<label>Password</label>
+									<input
+										type="password" required
+										className="form-control"
+										placeholder="Password"
+									/>
+								</div>
+								<div className="buttonSignup">
+									<Link type="submit" to="/investor">
+										<button type="submit" className="btn signupbtn">
+											Sign in
+										</button>
+									</Link>
+								</div>
+								<div className="sigininContent">
+									<p>
+										<Link to="/auth/forgot">Forgot Password?</Link>
+									</p>
+									<p>
+										Don't have an account? <Link to="/auth/signup">Signup</Link>
+									</p>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div className="col-md-4"></div>
+			</div>
+		</div>
+	);
+};
 
 export default Signin;
