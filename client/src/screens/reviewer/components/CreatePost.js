@@ -6,7 +6,7 @@ const CreatePost = () => {
 			<div className="col-md-12">
 				<div className="col-md-8 create-post">
 					<form>
-						<div className="create mt-4">
+						<div className="create mt-8">
                             <div className="form-group">
 							<textarea placeholder="Write Your Observation to attract a Business Investment"></textarea>
                             </div>
