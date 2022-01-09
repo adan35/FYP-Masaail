@@ -139,6 +139,26 @@
     margin: 5px;
 }
 
+.pollsTitle{
+    margin-left: 20px;
+    color: #14279B;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pollsTitleText{
+    margin-left: 20px;
+}
+
+.pollsTags{
+    color: #E6E6E6;
+    margin: 10px;
+}
+.tags{
+    background-color: #14279B;
+    color: #E6E6E6;
+    margin: 10px;
+}
 
 .dummyClass{
     display: none;

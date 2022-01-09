@@ -21,7 +21,9 @@ const Reviewer = (params) => {
 					<div className="col">
 						<div className="text-end profile"></div>
 						<div class="dropdown">
-							<div class="dropbtn"><i class="fas fa-sort-down"></i></div>
+							<div class="dropbtn">
+								<i class="fas fa-sort-down"></i>
+							</div>
 							<div class="dropdown-content">
 								<a href="#">Profile</a>
 								<a href="#">Settings</a>
