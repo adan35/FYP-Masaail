@@ -1,109 +1,174 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-
+import React from "react";
+import { Link } from "react-router-dom";
 const SignUp = () => {
-    return (
-        <>
-            <div>
-          <header>
-            <div className="logo">
-              <h3>MASAAIL.com</h3>
-            </div>
-            <div className="login_text">
-              <p>SignUp</p>
-            </div>
-          </header>
-    
-          <div className="main-sign">
-            <p className="sign" align="center">Sign Up</p>
-            <form className="form1">
-            <div class="container">
-            <div class="row g-3 mb-1">
-                <div class="col-sm-6">
-                    <label for="fistName" class="form-label"> First Name</label>
-                    <input id="first Name " type="text" class="form-control" placeholder="Muhammad" required/>
-                    <div class="invalid-feedback"> Valid First name Is Required</div>
-                </div>
-                <div class="col-sm-6 ">
-                    <label for="lastName" class="form-label"> Last Name</label>
-                    <input id="last Name " type="text" class="form-control" placeholder="Haris" required/>
-                    <div class="invalid-feedback"> Valid Last name Is Required</div>
-                </div>
-            </div>
-            <div class="col-12 mb-2">
-                <label for="username" class="form-label">Email</label>
-                <div class="input-group">
-                    <span class="input-group-text">@</span>
-
-                    <input id="user Name " type="text" class="form-control" placeholder="mharis@example.com" required/>
-                </div>
-            </div>
-
-            <div class="invalid-feedback"> Valid Input Is Required</div>
-
-            <div class="row my-2">
-                <div class="col-md-5">
-                    <label for="Province" class="form-label">Province</label>
-                    <select id="pname" class="form-control" placeholder="Choose....." required>
-                        <option value="">Choose...</option>
-                        <option value="P">Punjab</option>
-                        <option value="S">Sindh</option>
-                        <option value="B">Balochistan</option>
-                        <option value="K">KPK</option>
-                    </select>
-                    <div class="invalid-feedback"> Valid Input Is Required</div>
-
-                </div>
-                <div class="col-md-4">
-                    <label for="City" class="form-label">City</label>
-                    <select id="cname" class="form-control" placeholder="Choose....." required>
-                        <option value="">Choose...</option>
-                        <option value="L">Lahore</option>
-                        <option value="K">Karachi</option>
-                        <option value="I">Islamabad</option>
-                        <option value="G">Gujranwala</option>
-                    </select>
-                    <div class="invalid-feedback"> Valid Input Is Required</div>
-                </div>
-
-                <div class="col-md-3">
-                    <label for="Code" class="form-label">Postal Code</label>
-                    <input id="postalcode" type=" number " class="form-control" placeholder="042" required/>
-                    <div class="invalid-feedback"> Valid Input Is Required</div>
-                </div>
-            </div>
-            <div class="col-12 mb-2">
-                <label for="address" class="form-label">Address</label>
-                <input id="Address " type="text" class="form-control" placeholder="Wahdat Road etc" required/>
-            </div>
-            <div class="invalid-feedback"> Valid Input Is Required</div>
-            <div class="row mb-1">
-                <div class="col-sm-6">
-                    <label for="Password" class="form-label">Password</label>
-                    <input id="siPassword" type="password" class="form-control" required/>
-                    <div class="invalid-feedback"> Valid Input Is Required</div>
-                </div>
-                <div class="col-sm-6 ">
-                    <label for="lastName" class="form-label">Confirm Password</label>
-                    <input id="srcpassword" type="password" class="form-control" required/>
-                    <div class="invalid-feedback"> Valid Input Is Required</div>
-                </div>
-            </div>
-            <div class="txtarea mb-3 ">
-                <label for="comment">Business Idea:</label>
-                <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Why It Occured to you...."></textarea>
-            </div>
-            <div class="signupbtn">
-            <button type="button" class="submit-signup">Sign Up</button>
-           </div>
-           <br/>
-           <p class="linkl text-center " >Already Registered? <Link to="/auth/signin"  > Login</Link> </p>
-        </div>
-            </form>                      
-          </div>
-        </div>
-        </>
-    )
-}
+	return (
+		<>
+			<div>
+				<div className="background">
+					<div className="row siginPage">
+						<div className="col-md-2">
+							<div className="headerlogo">
+								<h3>masaail.com</h3>
+							</div>
+						</div>
+						<div className="col-md-8">
+							<div className="container-fluid sigin-card signupPage">
+								<div className="signup-form">
+									<div className="card-header">
+										<h3>Sign Up</h3>
+									</div>
+									<form>
+                                        <div className="row">
+                                            <div className="col-md-6">
+                                            <div className="form-group">
+													<label>First Name*</label>
+													<input
+														type="text"
+														className="form-control"
+														placeholder="First Name"
+														required
+													/>
+												</div>
+                                            </div>
+                                            <div className="col-md-6">
+                                            <div className="form-group">
+													<label>Last Name*</label>
+													<input
+														type="text"
+														className="form-control"
+														placeholder="Last Name"
+														required
+													/>
+												</div>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-md-6">
+                                            <div className="form-group">
+													<label>Email*</label>
+													<input
+														type="email"
+														className="form-control"
+														placeholder="Email"
+														required
+													/>
+												</div>
+                                            </div>
+                                            <div className="col-md-6">
+                                            <div className="form-group">
+													<label>Country*</label>
+													<input
+														type="text"
+														className="form-control"
+														placeholder="Country"
+														required
+													/>
+												</div>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-md-6">
+                                            <div className="form-group">
+													<label>State*</label>
+													<input
+														type="text"
+														className="form-control"
+														placeholder="State"
+														required
+													/>
+												</div>
+                                            </div>
+                                            <div className="col-md-6">
+                                            <div className="form-group">
+													<label>City*</label>
+													<input
+														type="text"
+														className="form-control"
+														placeholder="City"
+														required
+													/>
+												</div>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-md-6">
+                                            <div className="form-group">
+													<label>Postal Code*</label>
+													<input
+														type="text"
+														className="form-control"
+														placeholder="First Name"
+														required
+													/>
+												</div>
+                                            </div>
+                                            <div className="col-md-6">
+                                            <div className="form-group">
+													<label>Gender*</label>
+													<input
+														type="text"
+														className="form-control"
+														placeholder="Last Name"
+														required
+													/>
+												</div>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-md-6">
+                                            <div className="form-group">
+													<label>Password*</label>
+													<input
+														type="text"
+														className="form-control"
+														placeholder="Password"
+														required
+													/>
+												</div>
+                                            </div>
+                                            <div className="col-md-6">
+                                            <div className="form-group">
+													<label>Confirm Password*</label>
+													<input
+														type="text"
+														className="form-control"
+														placeholder="Confirm Password"
+														required
+													/>
+												</div>
+                                            </div>
+                                        </div>
+										<div className="row ">
+										</div>
+                                        <div className="row">
+                                            <div className="col-md-12">
+                                            <div className="buttonSignup">
+											<Link type="submit" to="/investor">
+												<button type="submit" className="btn signupbtn">
+													Sign Up
+												</button>
+											</Link>
+										</div>
+										<div className="sigininContent">
+											
+											<p>
+												Already have an account?{" "}
+												<Link to="/auth/signin">Sign In</Link>
+											</p>
+										</div>
+                                            </div>
+                                        </div>
+										
+									</form>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-2"></div>
+					</div>
+				</div>
+			</div>
+		</>
+	);
+};
 
 export default SignUp;

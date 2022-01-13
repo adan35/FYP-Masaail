@@ -45,278 +45,9 @@
   background: #1d1d1d;
   color: #adadad;
 }
-.otp-field {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  margin-right: 5px;
-  border: 2px solid #1d1d1d;
-  margin-bottom: 15px;
-}
-.otp-field:focus {
-  text-decoration: none;
-  background-color: #adadad;
-  border-color: #1d1d1d;
-  outline: 0;
-  box-shadow: none;
-}
 
-.buttonClear {
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
-  font-size: 14px;
-  line-height: 1;
-  border-radius: 500px;
-  transition-property: background-color, border-color, color, box-shadow, filter;
-  transition-duration: 0.3s;
-  border: 3px solid #1d1d1d;
-  letter-spacing: 2px;
-  min-width: 140px;
-  text-transform: uppercase;
-  white-space: normal;
-  font-weight: 700;
-  text-align: center;
-  padding: 16px 14px 18px;
-  color: #adadad;
-  box-shadow: inset 0 0 0 2px none;
-  background-color: #1d1d1d;
-  height: 48px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-.buttonClear:hover {
-  color: #adadad;
-  background-color: transparent;
-  border: 3px solid #1d1d1d;
-  color: #1d1d1d;
-}
-/* Forgot */
-.text-email {
-  color: #1d1d1d;
-}
-.email-forgot {
-  width: 300px;
-}
-
-.cursor {
-  cursor: pointer;
-}
-.input-email {
-  display: inline;
-  width: 300px;
-  height: 50px;
-  padding-left: 10px;
-  margin-right: 5px;
-  border: 3px solid #1d1d1d;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  background-color: transparent;
-  margin-right: 10px;
-  color: #1d1d1d;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-.input-email:focus {
-  background-color: transparent;
-  border-color: #1d1d1d;
-  outline: 0;
-  box-shadow: none;
-  color: #1d1d1d;
-  font-weight: 500;
-}
-.btn-send {
-  background-color: #1d1d1d;
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
-  font-size: 14px;
-  line-height: 1;
-  border-radius: 3px;
-  transition-property: background-color, border-color, color, box-shadow, filter;
-  transition-duration: 0.3s;
-  border: 3px solid #1d1d1d;
-  letter-spacing: 2px;
-  min-width: 140px;
-  font-weight: 600;
-  white-space: normal;
-  font-weight: 700;
-  text-align: center;
-  padding: auto;
-  color: #adadad;
-  box-shadow: inset 0 0 0 2px none;
-  background-color: #1d1d1d;
-  height: 40px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-.btn-send:hover {
-  background-color: transparent;
-  border: 3px solid #1d1d1d;
-  color: #adadad;
-  color: #1d1d1d;
-}
-.btn-send:focus {
-  color: #adadad;
-  background-color: transparent;
-  border: 3px solid #1d1d1d;
-  color: #1d1d1d;
-  box-shadow: transparent;
-}
 
 /* homepage and loginpage */
-
-.main {
-  background-color: #FFFFFF;
-  width: 400px;
-  height: 400px;
-  margin: 10em auto;
-  border-radius: 1.5em;
-  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-}
-
-.main-sign {
-  background-color: #FFFFFF;
-  width: 800px;
-  height: 800px;
-  margin: 10em auto;
-  border-radius: 1.5em;
-  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-}
-
-.sign {
-  padding-top: 40px;
-  color: #8C55AA;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
-  font-size: 23px;
-}
-
-.un {
-width: 76%;
-color: rgb(38, 50, 56);
-font-weight: 700;
-font-size: 14px;
-letter-spacing: 1px;
-background: rgba(136, 126, 126, 0.04);
-padding: 10px 20px;
-border: none;
-border-radius: 20px;
-outline: none;
-box-sizing: border-box;
-border: 2px solid rgba(0, 0, 0, 0.02);
-margin-bottom: 50px;
-margin-left: 46px;
-text-align: center;
-margin-bottom: 27px;
-font-family: 'Ubuntu', sans-serif;
-}
-
-form.form1 {
-  padding-top: 40px;
-}
-
-.pass {
-      width: 76%;
-color: rgb(38, 50, 56);
-font-weight: 700;
-font-size: 14px;
-letter-spacing: 1px;
-background: rgba(136, 126, 126, 0.04);
-padding: 10px 20px;
-border: none;
-border-radius: 20px;
-outline: none;
-box-sizing: border-box;
-border: 2px solid rgba(0, 0, 0, 0.02);
-margin-bottom: 50px;
-margin-left: 46px;
-text-align: center;
-margin-bottom: 27px;
-font-family: 'Ubuntu', sans-serif;
-}
-
-
-.un:focus, .pass:focus {
-  border: 2px solid rgba(0, 0, 0, 0.18) !important;
-  
-}
-
-.submit {
-cursor: pointer;
-  border-radius: 5em;
-  color: #fff;
-  background: linear-gradient(to right, #9C27B0, #E040FB);
-  border: 0;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  font-family: 'Ubuntu', sans-serif;
-  margin-left: 35%;
-  font-size: 13px;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-}
-
-.submit-signup {
-  cursor: pointer;
-    border-radius: 5em;
-    color: #fff;
-    background: linear-gradient(to right, #9C27B0, #E040FB);
-    border: 0;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 13px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-  }
-
-.forgot {
-  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-  color: #E1BEE7;
-  padding-top: 15px;
-}
-
-a {
-  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-  color: #E1BEE7;
-  text-decoration: none
-}
-
-.signup {
-  text-align: center;
-}
-
-
-.logo {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-.logo > h3 {
-  color: #E040FB;
-}
-
-.login_text {
-  position: absolute;
-  top: 100px;
-  left: 0px;
-  padding-top: 10px;
-  width: 120px !important;
-  background-color: #E040FB;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-
-.login_text > p {
-  text-align: center;
-  color: white;
-}
-
 .home_container {
   width: auto;
   height: auto;
@@ -350,21 +81,6 @@ a {
   padding: 0px 15px;
 }
 
-.btn {
-  display: block;
-  width: 150px;
-  height: 30px;
-  margin: 10px 0px;
-  background-color: grey;
-  border: none;
-  color: white;
-  border-radius: 5px;
-}
-
-.already_registered {
-  padding: 50px 15px;
-}
-
 @media (max-width: 600px) {
   .main {
       border-radius: 0px;
@@ -387,29 +103,268 @@ a {
   align-content: center;
   justify-content: center;
 }
-.signupbtn{
-  display: flex;
-justify-content: center;
-align-items: center;
-color:#E040FB;;
 
-
-}
-input:hover{
-  background-color:rgb(240, 208, 255);
-}
-label{
-font-weight: bold;
-color:#E040FB;;
-font-family: "Lucida Console", "Courier New", monospace;
-
+.background{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.form-control{
-  border: 2px solid #E040FB;;
-  border-radius: 7px;
+/* sign & signup*/
+.siginPage .sigin-card{
+  margin-top: 30%;
+  width: 80%;
+  padding: 40px;
+  border-radius: 20px;;
+  box-shadow: 2px 2px 15px 2px #5C7AEA;
+  
+}
+
+
+
+.siginPage .headerlogo{
+  margin-left:30px;
+  margin-top:30px;
+  padding:10px;
+  text-align: center;
+  width: max-content;
+  height: max-content;
+  background-color: #14279B;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px #14279B;
+}
+.siginPage .headerlogo:hover{
+  cursor:pointer
+}
+
+.siginPage .headerlogo h3{
+  color:white;
+  font-weight: bold;
+}
+
+.siginPage .headerlogo h4{
+  color:white;
+  font-weight: bold;
+}
+
+.siginPage .sigin-card .card-header{
+  padding:auto;
+  align-self: center;
+  background-color: transparent;
+  border:none;
+  border-color: transparent;
+}
+
+.siginPage .sigin-card .card-header h3{
+  color: #14279B;
+  font-weight: bold;
+}
+
+.siginPage .sigin-card input{
+  margin-bottom: 7px;
+  border-color:#14279B;
+  border-radius: 2px;
+  border-width: 2px;
+  padding: 10px;
+  width: 100%;
+}
+.siginPage .sigin-card input:target{
+  border:2px solid #14279B;
+  text-decoration: none;
+}
+
+.siginPage .sigin-card label{
+  font: 1em sans-serif;
+  margin: 7px;
+  color: #14279B;
+  font-weight: bold;
+  
+}
+.siginPage .sigin-card .buttonSignup{
+  text-align: center;
+}
+.siginPage .sigin-card button{
+  width: 100px;
+  margin-top: 5px;
+  text-align: center;
+}
+.siginPage .sigin-card .signupbtn{
+  text-align: center;
+  height: 40px;
+  margin-top: 30px;
+  transition: 0.8s ease;
+  background-color: #14279B;
+  color: #E6E6E6;
+  font-size: 14px;
+  border-radius: 2rem;
+  font-weight: bold;
+  border: none;
+}
+.siginPage .sigin-card .signupbtn:hover{
+ 
+  transition: 0.8s ease;
+  background-color: #E6E6E6;
+  color: #14279B;
+  font-weight: bold;
+  border: 1px solid #14279B;
+}
+.siginPage .sigin-card .sigininContent{
+  width: 100%;
+  text-align: center;
+}
+.siginPage .sigin-card .sigininContent a{
+  color: #14279B;
+  text-decoration: none;
+  padding: auto;
+}
+
+.signupPage{
+  margin-top: 10% !important;
+}
+
+/* homepage*/
+.homeContent{
+  padding: 10%;
+}
+.homebutton{
+  text-align: center;
+  height: 40px;
+  transition: 0.8s ease;
+  background-color: #14279B;
+  color: #E6E6E6;
+  font-size: 14px;
+  border-radius: 2rem;
+  font-weight: bold;
+  border: none;
+}
+.homebutton:hover{
+  transition: 0.8s ease;
+  background-color: #E6E6E6;
+  color: #14279B;
+  font-weight: bold;
+  border: 1px solid #14279B;
+}
+.homeContent{
+  width: 100%;
+}
+.homeContent h2{
+  color: #3D56B2;
+}
+.homeContent .paragraph{
+  color: #818181;
+  font-weight: bold;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.homePage .homeContent button{
+  text-align: center;
+  height: 40px;
+  width: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: 0.8s ease;
+  background-color: #14279B;
+  color: #E6E6E6;
+  font-size: 14px;
+  border-radius: 2rem;
+  font-weight: bold;
+  border: none;
+  
+}
+.homePage .homeContent button:hover{
+  transition: 0.8s ease;
+  background-color: #E6E6E6;
+  color: #14279B;
+  font-weight: bold;
+  border: 1px solid #14279B;
+}
+
+
+.homeContent a{
+  color: #14279B;
+  text-decoration: none;
+}
+
+.homeCircle{
+  position: fixed;
+    bottom: 0;
+    right: 0;
+    width:50%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+/* OTP */
+.siginPage .otp-card{
+  margin-top: 15%;
+  width: 80%;
+  padding: 40px;
+  border-radius: 20px;;
+  box-shadow: 2px 2px 15px 2px #5C7AEA;
+  text-align: center;
+  
+}
+.siginPage .otp-card .card-header{
+  padding:auto;
+  align-self: center;
+  background-color: transparent;
+  border:none;
+  border-color: transparent;
+}
+.siginPage .otp-card .card-header h3{
+  color: #14279B;
+}
+
+.siginPage .otp-card .otpbutton{
+  text-align: center;
+  height: 40px;
+  width: 100px;
+  margin:5px;
+  transition: 0.8s ease;
+  background-color: #14279B;
+  color: #E6E6E6;
+  font-size: 14px;
+  border-radius: 2rem;
+  font-weight: bold;
+  border: none;
 
 }
+.siginPage .otp-card .otpbutton:hover{
+ 
+  transition: 0.8s ease;
+  background-color: #E6E6E6;
+  color: #14279B;
+  font-weight: bold;
+  border: 1px solid #14279B;
+}
+
+.siginPage .otp-card .paragraph{
+  color:  #14279B;
+}
+
+.otp-field{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin-right: 5px;
+  border: 2px solid #14279B;
+  margin-bottom: 15px;
+  color: #14279B;
+  font-weight: bolder;
+  font-size: 25px;
+}
+.otp-field:focus {
+  background-color: transparent;
+  border: 3px solid #14279B;
+  outline: 0;
+  box-shadow: none;
+  color: #14279B;
+  font-weight: bolder;
+}
+
 
 
 .dummyClass{
