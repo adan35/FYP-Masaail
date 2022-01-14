@@ -1,13 +1,10 @@
 import React from "react";
-import AdminSidebar from "./AdminSidebar";
 
 const Investors = () => {
   return (
     <>
       <div>
         
-        <AdminSidebar />
-
         <div className="main-content overflow-auto">
         <table className="table table-hover">
             <thead>

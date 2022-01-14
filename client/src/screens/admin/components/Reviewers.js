@@ -1,10 +1,9 @@
 import React from "react";
-import AdminSidebar from "./AdminSidebar";
 
 const Reviewers = () => {
   return (
     <>
-        <AdminSidebar />
+          
         <div className="main-content overflow-auto">
         <table className="table table-hover">
             <thead>

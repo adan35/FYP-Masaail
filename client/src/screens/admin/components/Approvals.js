@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AdminSidebar from "./AdminSidebar";
+
 const Approvals = () => {
   return (
     <div>
-      
-      <AdminSidebar />
 
       <div className="main-content mainBody">
           <table className="table table-hover approvaltable">

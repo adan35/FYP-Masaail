@@ -1,10 +1,12 @@
 import {Approvals, Dashboard, Queries, Reviewers, Investors} from "./components";
 import { Switch, Route } from "react-router-dom";
+import AdminSidebar from "./components/AdminSidebar";
 import "./admin.css";
 
 const Admin = () => {
     return (
         <div>
+            <AdminSidebar />
             <Switch>
                 <Route exact path="/admin" component={Dashboard}/>
                 <Route exact path="/admin/approvals" component={Approvals}/>

@@ -9,7 +9,7 @@ const Reviewer = (params) => {
 			<div>
 				<div className="row mt-4">
 					<div className="title">
-						<h3 className="text">masaail.com</h3>
+						<p className="text">masaail.com</p>
 					</div>
 
 					<div className="col-md-3">

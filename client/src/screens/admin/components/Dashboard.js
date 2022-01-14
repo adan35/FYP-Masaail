@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AdminSidebar from "./AdminSidebar";
+
 const Dashboard = () => {
   return (
     <>
       <div>
-        
-        <AdminSidebar />
         
         <div className="main-content mainBody">
             <div className="row">
