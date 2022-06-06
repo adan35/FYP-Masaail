@@ -9,6 +9,31 @@ const faker = require("faker");
 const config = require("../config");
 let UserSchema = new mongoose.Schema(
 	{
+
+    fullName:{
+        type:String,
+        required:true,
+    },
+
+    email: {
+        type: String,
+    },
+
+    country: {
+        type: String,
+    },
+
+    state:{
+      type:String,
+    },
+
+    city:{
+      type:String,
+    },
+
+    postalCode: String,
+
+    gender: String,
 		
 		otp: { type: String, default: null },
 		otpExpires: { type: Date, default: null },
@@ -17,7 +42,7 @@ let UserSchema = new mongoose.Schema(
 		salt: String,
 		
 		role: {
-			type: Number, // 1-admin 2-agent 3-user
+			type: Number, // 1-admin 2-investor 3-reviewers
 		},
 	},
 	{ timestamps: true }
