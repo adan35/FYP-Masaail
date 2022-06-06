@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import http from "../../../axios";
 import "../auth.css";
 
 const OTP = () => {
 	const [otp, setOtp] = useState(new Array(4).fill(""));
+  const [error, setError] = useState("");
 
 	const handleChange = (element, index) => {
 		if (isNaN(element.value)) return false;
@@ -14,6 +16,14 @@ const OTP = () => {
 			element.nextSibling.focus();
 		}
 	};
+
+  const onSubmit = () => {
+    http.post('/user/verify/otp', {otp: otp.join(""), email: window.localStorage.getItem('email')}).then(res => {
+      console.log(res.data);
+    }).catch(err => {
+      setError("Inavlid OTP");
+    });
+  }
 
 	return (
 		<>
@@ -50,6 +60,7 @@ const OTP = () => {
 										<p className="paragraph">OTP Entered - {otp.join("")}</p>
 									</div>
 									<div className="otpButton">
+                    <p className="text-danger">{error}</p>
 										<p>
 											<button
 												className="otpbutton"
@@ -58,8 +69,9 @@ const OTP = () => {
 												Clear
 											</button>
 											<button
+                        type="button"
 												className="otpbutton"
-												onClick={(e) => alert("Entered OTP is " + otp.join(""))}
+												onClick={onSubmit}
 											>
 												Verify OTP
 											</button>

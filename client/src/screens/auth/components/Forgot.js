@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import http from "../../../axios";
 import "../auth.css";
 
 const Forgot = () => {
   const [email, setEmail] = useState("");
-
+  const history = useHistory();
   const onSubmit = () => {
+    window.localStorage.setItem('email', email);
     http.post('/user/send/otp', {email: email}).then(res => {
-      console.log(res.data);
+      history.push("/auth/otp");
     }).catch(err => {});
   }
 	return (
