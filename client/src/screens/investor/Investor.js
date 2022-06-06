@@ -1,9 +1,14 @@
 import { ChatBox, CreatePoll, Timeline } from "./components";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Link, useHistory } from "react-router-dom";
 import "./investor.css";
 import Polls from "../shared/polls";
 
 const Investor = (params) => {
+  const history = useHistory();
+  const logout = () => {
+    window.localStorage.removeItem("token");
+    history.push("/auth");
+  }
   return (
     <div>
       <div>
@@ -26,7 +31,7 @@ const Investor = (params) => {
                   <div className="dropdown-content">
                     <a href="#">Profile</a>
                     <a href="#">Settings</a>
-                    <a href="#">Logout</a>
+                    <a onClick={logout}>Logout</a>
                   </div>
                 </div>
               </div>

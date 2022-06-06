@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import http from "../../../axios";
 import "../auth.css";
 
 const Forgot = () => {
+  const [email, setEmail] = useState("");
+
+  const onSubmit = () => {
+    http.post('/user/send/otp', {email: email}).then(res => {
+      console.log(res.data);
+    }).catch(err => {});
+  }
 	return (
 		<>
 			<div className="background">
@@ -23,15 +31,14 @@ const Forgot = () => {
 											type="email"
 											className="form-control"
 											placeholder="Email"
+                      onChange={(e) => setEmail(e.target.value)}
 											required
 										/>
 									</div>
 									<div className="buttonSignup">
-										<Link type="submit" to="/auth/otp">
-											<button type="submit" className="btn signupbtn">
+											<button type="button" className="btn signupbtn" onClick={onSubmit}>
 												Send
 											</button>
-										</Link>
 									</div>
 								</form>
 							</div>

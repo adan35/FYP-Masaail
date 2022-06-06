@@ -1,7 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import http from "../../../axios";
 import "../auth.css";
 const Signin = () => {
+  const [user, setUser] = useState({});
+  const [errorMessage, setErrorMessage] = useState("");
+  const history = useHistory();
+
+  const onSubmit = () => {
+    http.post('/user/login', { user: user }).then(res => {
+      window.localStorage.setItem("token", res.data.data.token);
+      history.push("/investor");
+    }).catch(err => {
+      setErrorMessage("Invalid email or password");
+    })
+  }
 	return (
 		<div className="background">
 			<div className="row siginPage">
@@ -23,6 +36,7 @@ const Signin = () => {
 										type="email"
 										className="form-control"
 										placeholder="Email" required
+                    onChange={(e) => setUser({ ...user, email: e.target.value })}
 									/>
 								</div>
 								<div className="form-group">
@@ -31,14 +45,14 @@ const Signin = () => {
 										type="password" required
 										className="form-control"
 										placeholder="Password"
+                    onChange={(e) => setUser({ ...user, password: e.target.value })}
 									/>
 								</div>
 								<div className="buttonSignup">
-									<Link type="submit" to="/investor">
-										<button type="submit" className="btn signupbtn">
+                  <p className="text-danger">{errorMessage}</p>
+										<button type="button" className="btn signupbtn" onClick={onSubmit}>
 											Sign in
 										</button>
-									</Link>
 								</div>
 								<div className="sigininContent">
 									<p>
