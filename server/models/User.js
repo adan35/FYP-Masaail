@@ -112,6 +112,7 @@ UserSchema.methods.toJSON = function () {
     state: this.state,
     city: this.city,
     postalCode: this.postalCode,
+    profileImage: '/uploads/user.png'
 	};
 };
 

@@ -66,6 +66,7 @@ module.exports = (app) => {
 		mongoose.set("debug", true);
 
 	require("./models/User");
+	require("./models/Post");
 
 	require("./utilities/passport");
 	app.use(passport.initialize());
