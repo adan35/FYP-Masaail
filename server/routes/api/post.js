@@ -19,4 +19,28 @@ router.post("/new", auth.required, auth.user, (req, res, next) => {
   }
 });
 
+router.get('/get/all', (req, res, next) => {
+  Post.find({}).sort({ createdAt: -1 }).exec(
+    (err, posts) => {
+      if (err) return next(err);
+      next(new OkResponse(posts));
+    }
+  );
+})
+
+router.get('/get/my', auth.required, auth.user, (req, res, next) => {
+  try{
+    Post.find({by: req.user._id}).sort({ createdAt: -1 }).exec(
+      (err, posts) => {
+        if (err) return next(err);
+        next(new OkResponse(posts));
+      }
+    );
+  }
+  catch(err){
+    console.log(err);
+    next(new BadRequestResponse(err));
+  }
+})
+
 module.exports = router;
