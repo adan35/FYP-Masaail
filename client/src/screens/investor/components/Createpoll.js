@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import http from "../../../axios";
+import { useHistory } from "react-router-dom";
 
 const CreatePoll = () => {
   const [input, setInput] = useState("");
+  const [title, setTitle] = useState("");
   const [tags, setTags] = useState([]);
+  const history = useHistory();
   const onChange = (e) => {
     const { value } = e.target;
     setInput(value);
@@ -13,7 +17,8 @@ const CreatePoll = () => {
 
     if (keyCode === 13 && trimmedInput.length && !tags.includes(trimmedInput)) {
       e.preventDefault();
-      setTags((prevState) => [...prevState, trimmedInput]);
+      let newTags = [...tags, {name: trimmedInput}];
+      setTags(newTags);
       setInput("");
     }
 
@@ -26,6 +31,19 @@ const CreatePoll = () => {
       setInput(poppedTag);
     }
   };
+
+  const onSubmit = () => {
+    let body = {
+      poll:{
+        title: title,
+        polls: tags
+      }
+    }
+
+    http.post('/poll/new', body).then(res => {
+      history.push('/investor/polls');
+    });
+  }
   return (
     <>
       <div>
@@ -36,11 +54,12 @@ const CreatePoll = () => {
                 <input
                   className="mt-3 tags-input pollsTitle"
                   placeholder="Title"
+                  onChange={(e) => setTitle(e.target.value)}
                 />
               </div>
               <div className="mt-2 pollsTags">
                 {tags.map((tag) => (
-                  <span className="tag">{tag}</span>
+                  <span className="tag">{tag.name}</span>
                 ))}
               </div>
               <div className="form-group"></div>
@@ -53,7 +72,7 @@ const CreatePoll = () => {
               />
             </div>
             <div className="d-flex justify-content-end">
-              <button className="btn">Post</button>
+              <button className="btn" type="button" onClick={onSubmit}>Post</button>
             </div>
           </div>
         </form>
