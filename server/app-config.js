@@ -52,20 +52,10 @@ module.exports = (app) => {
 		app.use(errorhandler());
 	}
 
-	if (isProduction) {
-		mongoose.connect(process.env.MONGODB_URI, {
-			useNewUrlParser: true,
-			useUnifiedTopology: true,
-			useFindAndModify: false,
-			useCreateIndex: true,
-		});
-	} else {
 		mongoose
 			.connect("mongodb://localhost/masail?retryWrites=false", {
 				useNewUrlParser: true,
 				useUnifiedTopology: true,
-				useFindAndModify: false,
-				useCreateIndex: true,
 			})
 			.catch((err) => {
 				console.log(err);
@@ -74,7 +64,6 @@ module.exports = (app) => {
 				console.log("connected to db in development environment");
 			});
 		mongoose.set("debug", true);
-	}
 
 	require("./models/User");
 

@@ -10,10 +10,15 @@ const config = require("../config");
 let UserSchema = new mongoose.Schema(
 	{
 
-    fullName:{
+    firstName:{
         type:String,
         required:true,
     },
+
+    lastName:{
+      type:String,
+      required:true,
+  },
 
     email: {
         type: String,
@@ -94,12 +99,19 @@ UserSchema.pre("find", autoPopulate);
 UserSchema.methods.toAuthJSON = function () {
 	return {
 		token: this.generateJWT(),
+    user: this.toJSON(),
 	};
 };
 
 UserSchema.methods.toJSON = function () {
 	return {
-		
+		firstName: this.firstName,
+    lastName: this.lastName,
+    email: this.email,
+    country: this.country,
+    state: this.state,
+    city: this.city,
+    postalCode: this.postalCode,
 	};
 };
 

@@ -4,6 +4,7 @@ let passport = require("passport");
 let User = mongoose.model("User");
 let auth = require("../auth");
 let {OkResponse, BadRequestResponse} = require("express-http-response");
+let {sendEmailOtpMail} = require('../../utilities/sendgridEmail');
 
 router.post('/signup', (req, res, next) => {
   let user = new User(req.body.user);
@@ -17,19 +18,22 @@ router.post('/signup', (req, res, next) => {
 })
 
 
-router.post('/login', (req, res, next) => {
-  passport.authenticate('local', (err, user, info) => {
-    if (err) {
-      return next(new BadRequestResponse(err));
-    }
-    if (user) {
-      user.generateJWT();
-      return next(new OkResponse(user));
-    } else {
-      return next(new BadRequestResponse(info));
-    }
-  })
-});
+router.post("/login", (req, res, next) => {
+  passport.authenticate(
+    "local",
+    { session: false },
+    function (err, user, info) {
+      console.log(err, user, info )
+      if (err || !user) {
+       return next(new BadRequestResponse(err));
+       
+      }
+      if (user) {
+        next (new OkResponse(user.toAuthJSON()));
+      }
+    },
+  )(req, res, next);
+})
 
 router.put('/profile', auth.required, auth.user, (req, res, next) => {
   req.user.fullName = req.body.user.fullName || req.user.fullName;
@@ -53,12 +57,13 @@ router.post('/send/otp', (req, res, next) => {
     if(!user){
       return next(new BadRequestResponse("User not found"));
     }
-    user.generateOTP();
+    user.setOTP();
+    sendEmailOtpMail(user);
     user.save((err, user) => {
       if(err){
         return next(new BadRequestResponse(err));
       }
-      return next(new OkResponse(user));
+      return next(new OkResponse("OTP sent"));
     })
   });
 })
@@ -104,6 +109,10 @@ router.post('/change/password', (req, res, next) => {
       return next(new OkResponse("Password changed"));
     })
   });
+})
+
+router.get('/context', auth.required, auth.user, (req, res, next) => {
+  return next(new OkResponse(req.user));
 })
 
 module.exports = router;

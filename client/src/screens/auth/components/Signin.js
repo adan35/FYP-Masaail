@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import http from "../../../axios";
-import "../auth.css";
+import "../auth.css"; 
 const Signin = () => {
   const [user, setUser] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
@@ -12,7 +12,7 @@ const Signin = () => {
       window.localStorage.setItem("token", res.data.data.token);
       history.push("/investor");
     }).catch(err => {
-      setErrorMessage("Invalid email or password");
+      setErrorMessage("Inavlid Email or Password");
     })
   }
 	return (
