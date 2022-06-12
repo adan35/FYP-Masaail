@@ -40,7 +40,7 @@ const Investor = (params) => {
         </div>
       </div>
       <div className="row mt-4">
-        <div className="col-md-2 width-container">
+        <div className="col-md-2 width-container d-flex flex-column">
           <Link to="/investor/createpoll">
             <button className="btn post-btn">
               <i className="fas fa-clipboard-list"></i>Create Poll

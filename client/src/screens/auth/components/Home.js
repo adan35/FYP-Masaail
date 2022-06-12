@@ -21,14 +21,14 @@ const Home = () => {
 
 							<h2>Are You?</h2>
 							<div className="homeButton">
-								<Link type="submit" to="/investor">
+								<Link type="submit" to="/auth/signup">
 									<button type="submit" className="btn homebutton">
 										Reviewer
 									</button>
 								</Link>
 							</div>
 							<div className="homeButton">
-								<Link type="submit" to="/investor">
+								<Link type="submit" to="/auth/signup">
 									<button type="submit" className="btn homebutton">
 										Investor
 									</button>

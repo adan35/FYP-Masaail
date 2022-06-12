@@ -15,8 +15,8 @@ function getTokenFromHeader(req){
 const user = (req, res, next) => {
   User.findById(req.payload.id).then(function(user){
     if(!user){
-       next(new UnauthorizedResponse ());
-       }
+      next(new UnauthorizedResponse ());
+    }
        // also add here bit of status
     req.user = user
     next();
@@ -25,8 +25,8 @@ const user = (req, res, next) => {
 const admin = (req, res, next) => {
   User.findById(req.payload.id).then(function(user){
     if(!user && (user.role !== 2 || user.role !== 3)){
-       next(new UnauthorizedResponse ());
-       }
+      next(new UnauthorizedResponse ());
+    }
     req.user = user;
     next();
   }).catch(next);

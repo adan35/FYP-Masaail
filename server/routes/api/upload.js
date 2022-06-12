@@ -4,6 +4,7 @@ const path = require("path");
 var fs = require("fs");
 var multer = require("../../utilities/multer");
 var cpUpload = multer.fields([{ name: "file", maxCount: 1 }]);
+
 router.post("/", cpUpload, function (req, res, next) {
 	return res.json({ url: `uploads/${req.files["file"][0].filename}` });
 });

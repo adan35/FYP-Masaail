@@ -1,9 +1,14 @@
 import { CreatePost, MyPosts, Timeline } from "./components";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Link, useHistory } from "react-router-dom";
 import "./reviewer.css";
 import Polls from "../shared/polls";
 
 const Reviewer = (params) => {
+  const history = useHistory();
+  const logout = () => {
+    window.localStorage.removeItem("token");
+    history.push("/auth");
+  }
 	return (
 		<div>
 			<div>
@@ -27,30 +32,36 @@ const Reviewer = (params) => {
 							<div class="dropdown-content">
 								<a href="#">Profile</a>
 								<a href="#">Settings</a>
-								<a href="#">Logout</a>
+								<a href="/auth/signin" onClick={logout}>Logout</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div className="row mt-4">
-				<div className="col-md-3">
+
+				<div className="col-md-3 d-flex flex-column">
+
 					<Link to="/reviewer/createpost">
 						<button className="btn post-btn">
 							<i class="fas fa-pen-square"></i>Create Post
 						</button>
 					</Link>
+
 					<Link to="/reviewer/">
 						<button className="btn post-btn">
 							<i class="fas fa-home"></i>Timeline
 						</button>
 					</Link>
+
 					<Link to="/reviewer/myposts">
 						<button className="btn post-btn">
 							<i class="fas fa-clipboard-list"></i>My Reviews
 						</button>
 					</Link>
+
 				</div>
+
 				<div className="col">
 					<Switch>
 						<Route exact path="/reviewer" component={Timeline} />
