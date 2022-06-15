@@ -12,6 +12,8 @@ const SignUp = () => {
     }
     setErrorMessage("");
 
+    console.log(user);
+
     http.post("/user/signup", {user : user}).then(res => {
       history.push("/auth");
     }).catch(err => {
@@ -37,6 +39,23 @@ const SignUp = () => {
                   </div>
                   <form>
                     <div className="row">
+                    <div className="col-md-6">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="role" value="2" onChange={(e) =>
+                        setUser({ ...user, role: +(e.target.value) })
+                      }/>
+                      <label class="form-check-label" for="role">Investor</label>
+                    </div>
+                    </div>
+
+                    <div className="col-md-6">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="role" value="3" onChange={(e) =>
+                        setUser({ ...user, role: +(e.target.value) })
+                      }/>
+                      <label class="form-check-label" for="role">Reviewer</label>
+                    </div>
+                    </div>
                       <div className="col-md-6">
                         <div className="form-group">
                           <label>First Name*</label>

@@ -161,7 +161,7 @@
   font-weight: bold;
 }
 
-.siginPage .sigin-card input{
+.siginPage .sigin-card input[type='text'], .siginPage .sigin-card input[type='email'], .siginPage .sigin-card input[type='password']{
   margin-bottom: 7px;
   border-color:#14279B;
   border-radius: 2px;
@@ -169,7 +169,7 @@
   padding: 10px;
   width: 100%;
 }
-.siginPage .sigin-card input:target{
+.siginPage .sigin-card input[type='text']:target, .siginPage .sigin-card input[type='email']:target, .siginPage .sigin-card input[type='password']:target{
   border:2px solid #14279B;
   text-decoration: none;
 }

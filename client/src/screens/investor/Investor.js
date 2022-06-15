@@ -1,14 +1,23 @@
-import { ChatBox, CreatePoll, Timeline } from "./components";
+import { ChatBox, CreatePoll, Timeline, MyPolls } from "./components";
 import { Switch, Route, Link, useHistory } from "react-router-dom";
 import "./investor.css";
-import Polls from "../shared/polls";
+import { useEffect, useState } from "react";
+import http from "../../axios";
 
 const Investor = (params) => {
   const history = useHistory();
+  const [hot, setHot] = useState([]);
   const logout = () => {
     window.localStorage.removeItem("token");
+    window.localStorage.removeItem("user");
+    window.location.reload();
     history.push("/auth");
   }
+  useEffect(() => {
+    http.get("/post/hot/topics").then(res => {
+      setHot(res.data.data);
+    })
+    }, []);
   return (
     <div>
       <div>
@@ -65,24 +74,23 @@ const Investor = (params) => {
             <Route exact path="/investor" component={Timeline} />
             <Route exact path="/investor/chatbox" component={ChatBox} />
             <Route exact path="/investor/createpoll" component={CreatePoll} />
-            <Route exact path="/investor/polls" component={Polls} />
+            <Route exact path="/investor/polls" component={MyPolls} />
           </Switch>
         </div>
         <div className="col-md-3">
-          <h4>Hot Topics</h4>
-          <div className="hot-topic">
-            <h4>Lorem Ipsum</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-          <div className="hot-topic">
-            <h4>Lorem Ipsum</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-          <div className="hot-topic">
-            <h4>Lorem Ipsum</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
+					<h4>Hot Topics</h4>
+					{
+						hot.map((item, index) => {
+							return(
+								<div className="hot-topic">
+									<p>{
+										item.body
+									}</p>
+								</div>
+							);
+						})
+					}
+				</div>
       </div>
     </div>
   );

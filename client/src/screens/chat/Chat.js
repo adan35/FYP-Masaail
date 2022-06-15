@@ -1,7 +1,37 @@
 import "./chat.css"
 import user from "../../assets/img/user.jpg"
 import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import http from "../../axios";
+import constants from "../../constants";
 function Chat (){
+    const [chats, setChats] = useState([]);
+    const messagesEndRef = useRef(null)
+    const [message, setMessage] = useState("");
+    const [index, setIndex] = useState(0);
+    const user = JSON.parse(localStorage.getItem("user"));
+    useEffect(() => {
+        getChats();
+    }, []);
+
+    const getChats = () => {
+        http.get("/chat/get/all").then((res) => {
+            setChats(res.data.data);
+            scrollToBottom();
+        })
+    }
+
+    const scrollToBottom = () => {
+        messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+    }
+
+    const sendMessage = () => {
+        http.post("/chat/message", {chatId: chats[index]._id, message: message}).then((res) => {
+            getChats();
+            document.getElementById("msg").value = "";
+        })
+    }
+
     return (
         <div className="chat">
             <div class="messaging">
@@ -16,127 +46,53 @@ function Chat (){
                                     Inbox
                                 </h4>
                             </div>
-                            <div class="srch_bar">
-                                <div class="stylish-input-group">
-                                    <input type="text" class="search-bar" placeholder="Search" />
-                                    <span class="input-group-addon">
-                                        <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
-                                    </span> </div>
-                            </div>
                         </div>
                         <div class="inbox_chat">
-                            <div class="chat_list active_chat">
-                                <div class="chat_people">
-                                    <div class="chat_img"> <img src={user}/> </div>
-                                    <div class="chat_ib">
-                                        <h5>Muhhammad Haris <span class="chat_date">Dec 25</span></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut sapien viverra, consequat felis ut</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"> <img src={user}/> </div>
-                                    <div class="chat_ib">
-                                        <h5>Muhhammad Haris <span class="chat_date">Dec 25</span></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut sapien viverra, consequat felis ut</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"> <img src={user}/> </div>
-                                    <div class="chat_ib">
-                                        <h5>Muhhammad Haris <span class="chat_date">Dec 25</span></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut sapien viverra, consequat felis ut</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"> <img src={user}/> </div>
-                                    <div class="chat_ib">
-                                        <h5>Muhhammad Haris <span class="chat_date">Dec 25</span></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut sapien viverra, consequat felis ut</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"> <img src={user}/> </div>
-                                    <div class="chat_ib">
-                                        <h5>Muhhammad Haris <span class="chat_date">Dec 25</span></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut sapien viverra, consequat felis ut</p>
-                                    </div>
-                                </div>
-                            </div>
+                            {
+                                chats.map((chat, ind) => {
+                                    return (
+                                        <div class={ind === index ? "chat_list active_chat" : "chat_list"}>
+                                            <div class="chat_people" onClick={() => setIndex(ind)}>
+                                                <div class="chat_img"> <img src={
+                                                    constants.file_url + '/' + (user._id.toString() === chat.user1._id.toString() ? chat.user2.profileImage : chat.user1.profileImage)
+                                                }/> </div>
+                                                <div class="chat_ib">
+                                                    <h5>
+                                                        {
+                                                            user._id.toString() === chat.user1._id.toString() ? chat.user2.firstName : chat.user1.firstName
+                                                        }
+                                                    </h5>
+                                                    <p>{
+                                                       chat.messages.length > 0 ? chat.messages[chat.messages.length - 1].body : 'Start Chat'
+                                                    }</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                     <div class="mesgs">
-                        <div class="msg_history">
-                            <div class="incoming_msg">
-                                <div class="incoming_msg_img"> <img src={user} alt="sunil" /> </div>
-                                <div class="received_msg">
-                                    <div class="received_withd_msg">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                                        <span class="time_date"> 11:01 AM    |    June 9</span></div>
-                                </div>
-                            </div>
-                            <div class="outgoing_msg">
-                                <div class="sent_msg">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                                    <span class="time_date"> 11:01 AM    |    June 9</span> </div>
-                            </div>
-
-                            <div class="incoming_msg">
-                                <div class="incoming_msg_img"> <img src={user} alt="sunil" /> </div>
-                                <div class="received_msg">
-                                    <div class="received_withd_msg">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                                        <span class="time_date"> 11:01 AM    |    June 9</span></div>
-                                </div>
-                            </div>
-                            <div class="outgoing_msg">
-                                <div class="sent_msg">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                                    <span class="time_date"> 11:01 AM    |    June 9</span> </div>
-                            </div>
-
-                            <div class="incoming_msg">
-                                <div class="incoming_msg_img"> <img src={user} alt="sunil" /> </div>
-                                <div class="received_msg">
-                                    <div class="received_withd_msg">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                                        <span class="time_date"> 11:01 AM    |    June 9</span></div>
-                                </div>
-                            </div>
-                            <div class="outgoing_msg">
-                                <div class="sent_msg">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                                    <span class="time_date"> 11:01 AM    |    June 9</span> </div>
-                            </div>
-
-                            <div class="incoming_msg">
-                                <div class="incoming_msg_img"> <img src={user} alt="sunil" /> </div>
-                                <div class="received_msg">
-                                    <div class="received_withd_msg">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                                        <span class="time_date"> 11:01 AM    |    June 9</span></div>
-                                </div>
-                            </div>
-                            <div class="outgoing_msg">
-                                <div class="sent_msg">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                                    <span class="time_date"> 11:01 AM    |    June 9</span> </div>
-                            </div>
+                        <div class="msg_history" ref={messagesEndRef}>
+                            {
+                                chats[index]?.messages.map((chat, index) => {
+                                    return(
+                                        <>
+                                        <div class={chat.by._id.toString() === user._id.toString() ? 'outgoing_msg' : 'incoming_msg'}>
+                                            <div class={chat.by._id.toString() === user._id.toString() ? 'sent_msg' : 'received_mdg'}>
+                                                    <p>{chat.body}</p>
+                                            </div>
+                                        </div>
+                                        </>
+                                    );
+                                })
+                            }
                         </div>
                         <div class="type_msg">
                             <div class="input_msg_write">
-                                <input type="text" class="write_msg" placeholder="Type Here" />
-                                <button class="msg_send_btn" type="button"><i class="far fa-paper-plane"></i>   </button>
+                                <input type="text" id="msg" class="write_msg" placeholder="Type Here" onChange = {(e) => {setMessage(e.target.value)}} />
+                                <button class="msg_send_btn" type="button" onClick = {sendMessage}><i class="far fa-paper-plane"></i>   </button>
                             </div>
                         </div>
                     </div>

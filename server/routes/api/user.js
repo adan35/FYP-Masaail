@@ -112,7 +112,7 @@ router.post('/change/password', (req, res, next) => {
 })
 
 router.get('/context', auth.required, auth.user, (req, res, next) => {
-  return next(new OkResponse(req.user));
+  return next(new OkResponse(req.user.toAuthJSON()));
 })
 
 module.exports = router;

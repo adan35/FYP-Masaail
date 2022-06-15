@@ -52,8 +52,25 @@ PostSchema.methods.toJSON = function () {
     by: this.by,
     images: this.images,
     supportBy: this.supportBy,
+    supportCount: this.supportBy.length,
     createdAt: this.createdAt,
 	};
 };
+
+PostSchema.methods.toJSONFor = function (user) {
+  console.log("============" ,user._id, this.supportBy);
+	return {
+    _id: this._id,
+    body: this.body,
+    by: this.by,
+    images: this.images,
+    supportBy: this.supportBy,
+    supportCount: this.supportBy.length,
+    isSupported: this.supportBy.some(u => u._id.toString() === user._id.toString()),
+    createdAt: this.createdAt,
+	};
+};
+
+
 
 module.exports = mongoose.model("Post", PostSchema);

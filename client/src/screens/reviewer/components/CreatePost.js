@@ -43,7 +43,7 @@ const CreatePost = () => {
     }
 
     http.post("/post/new", data).then((res) => {
-      history.push("/reviewer");
+      history.push("/reviewer/myposts");
     });
   }
 

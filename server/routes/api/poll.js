@@ -29,7 +29,7 @@ router.get('/get/all', (req, res, next) => {
 })
 
 router.get('/get/my', auth.required, auth.user, (req, res, next) => {
-  Poll.find({by: req.user_id}).sort({ createdAt: -1 }).exec(
+  Poll.find({by: req.user}).sort({ createdAt: -1 }).exec(
     (err, polls) => {
       if (err) return next(err);
       next(new OkResponse(polls));

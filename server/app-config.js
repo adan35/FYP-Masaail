@@ -68,6 +68,7 @@ module.exports = (app) => {
 	require("./models/User");
 	require("./models/Post");
 	require("./models/Poll");
+	require("./models/Chat");
 
 	require("./utilities/passport");
 	app.use(passport.initialize());

@@ -10,7 +10,8 @@ const Signin = () => {
   const onSubmit = () => {
     http.post('/user/login', { user: user }).then(res => {
       window.localStorage.setItem("token", res.data.data.token);
-      history.push("/investor");
+      window.localStorage.setItem("user", JSON.stringify(res.data.data.user));
+	  window.location.reload();
     }).catch(err => {
       setErrorMessage("Inavlid Email or Password");
     })

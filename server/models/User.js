@@ -18,7 +18,7 @@ let UserSchema = new mongoose.Schema(
     lastName:{
       type:String,
       required:true,
-  },
+  	},
 
     email: {
         type: String,
@@ -40,15 +40,15 @@ let UserSchema = new mongoose.Schema(
 
     gender: String,
 		
-		otp: { type: String, default: null },
-		otpExpires: { type: Date, default: null },
-		
-		hash: { type: String, default: null },
-		salt: String,
-		
-		role: {
-			type: Number, // 1-admin 2-investor 3-reviewers
-		},
+	otp: { type: String, default: null },
+	otpExpires: { type: Date, default: null },
+	
+	hash: { type: String, default: null },
+	salt: String,
+	
+	role: {
+		type: Number, // 1-admin 2-investor 3-reviewers
+	},
 	},
 	{ timestamps: true }
 );
@@ -99,19 +99,21 @@ UserSchema.pre("find", autoPopulate);
 UserSchema.methods.toAuthJSON = function () {
 	return {
 		token: this.generateJWT(),
-    user: this.toJSON(),
+    	user: this.toJSON(),
 	};
 };
 
 UserSchema.methods.toJSON = function () {
 	return {
-		firstName: this.firstName,
+	_id: this._id,
+	firstName: this.firstName,
     lastName: this.lastName,
     email: this.email,
     country: this.country,
     state: this.state,
     city: this.city,
     postalCode: this.postalCode,
+	role: this.role,
     profileImage: 'uploads/user.png'
 	};
 };

@@ -2,13 +2,25 @@ import { CreatePost, MyPosts, Timeline } from "./components";
 import { Switch, Route, Link, useHistory } from "react-router-dom";
 import "./reviewer.css";
 import Polls from "../shared/polls";
+import { useEffect, useState } from "react";
+import http from "../../axios";
 
 const Reviewer = (params) => {
+	const [hot, setHot] = useState([]);
   const history = useHistory();
   const logout = () => {
     window.localStorage.removeItem("token");
+    window.localStorage.removeItem("user");
+	window.location.reload();
     history.push("/auth");
   }
+
+  useEffect(() => {
+	http.get("/post/hot/topics").then(res => {
+		setHot(res.data.data);
+	})
+  }, []);
+
 	return (
 		<div>
 			<div>
@@ -71,18 +83,17 @@ const Reviewer = (params) => {
 				</div>
 				<div className="col-md-3">
 					<h4>Hot Topics</h4>
-					<div className="hot-topic">
-						<h4>Lorem Ipsum</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
-					<div className="hot-topic">
-						<h4>Lorem Ipsum</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
-					<div className="hot-topic">
-						<h4>Lorem Ipsum</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
+					{
+						hot.map((item, index) => {
+							return(
+								<div className="hot-topic">
+									<p>{
+										item.body
+									}</p>
+								</div>
+							);
+						})
+					}
 				</div>
 			</div>
 		</div>
