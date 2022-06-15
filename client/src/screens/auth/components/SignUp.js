@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import http from "../../../axios";
 const SignUp = () => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({
+    role: 2,
+  });
   const [errorMessage, setErrorMessage] = useState("");
   const history = useHistory();
   const onSubmit = () => {
-    if(user.password !== user.confirmPassword){
+    if (user.password !== user.confirmPassword) {
       setErrorMessage("Password does not match");
       return;
     }
@@ -14,11 +16,14 @@ const SignUp = () => {
 
     console.log(user);
 
-    http.post("/user/signup", {user : user}).then(res => {
-      history.push("/auth");
-    }).catch(err => {
-      setErrorMessage(err.response.data.message);
-    })
+    http
+      .post("/user/signup", { user: user })
+      .then((res) => {
+        history.push("/auth");
+      })
+      .catch((err) => {
+        setErrorMessage(err.response.data.message);
+      });
   };
 
   return (
@@ -39,23 +44,41 @@ const SignUp = () => {
                   </div>
                   <form>
                     <div className="row">
-                    <div className="col-md-6">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="role" value="2" onChange={(e) =>
-                        setUser({ ...user, role: +(e.target.value) })
-                      }/>
-                      <label class="form-check-label" for="role">Investor</label>
-                    </div>
-                    </div>
+                      <div className="col-md-6">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="role"
+                            value="2"
+                            onChange={(e) =>
+                              setUser({ ...user, role: +e.target.value })
+                            }
+                          />
+                          <label class="form-check-label" for="role">
+                            Investor
+                          </label>
+                        </div>
+                      </div>
 
-                    <div className="col-md-6">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="role" value="3" onChange={(e) =>
-                        setUser({ ...user, role: +(e.target.value) })
-                      }/>
-                      <label class="form-check-label" for="role">Reviewer</label>
-                    </div>
-                    </div>
+                      <div className="col-md-6">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="role"
+                            value="3"
+                            onChange={(e) =>
+                              setUser({ ...user, role: +e.target.value })
+                            }
+                          />
+                          <label class="form-check-label" for="role">
+                            Reviewer
+                          </label>
+                        </div>
+                      </div>
                       <div className="col-md-6">
                         <div className="form-group">
                           <label>First Name*</label>
@@ -210,14 +233,17 @@ const SignUp = () => {
                     </div>
                     <div className="row "></div>
                     <div className="row">
-
-                    <div className="col-md-12 text-danger text-center">
-                      {errorMessage}
-                    </div>
+                      <div className="col-md-12 text-danger text-center">
+                        {errorMessage}
+                      </div>
 
                       <div className="col-md-12">
                         <div className="buttonSignup">
-                          <button type="button" className="btn signupbtn" onClick={onSubmit}>
+                          <button
+                            type="button"
+                            className="btn signupbtn"
+                            onClick={onSubmit}
+                          >
                             Sign Up
                           </button>
                         </div>
