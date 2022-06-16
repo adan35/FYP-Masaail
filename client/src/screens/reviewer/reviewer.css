@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .row {
   margin: 0;
   padding: 0;
@@ -189,13 +193,15 @@
   background-color: #14279b;
   padding: 10px;
   width: 170px;
-  height: 40px;
+  height: 60px;
   text-align: center;
 }
 
 .title .text {
   color: #e6e6e6;
   font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 .hot-topic {
@@ -321,5 +327,22 @@
 
 .text-bg-secondary {
   background-color: #aaa;
+  cursor: pointer;
+}
+
+.row .title {
+  cursor: pointer;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-bar {
+  margin-bottom: 10px;
+}
+
+.nav-bar .icon i {
+  font-size: 40px;
+  color: #14279b;
   cursor: pointer;
 }

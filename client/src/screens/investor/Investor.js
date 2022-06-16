@@ -1,4 +1,4 @@
-import { ChatBox, CreatePoll, Timeline, MyPolls } from "./components";
+import { ChatBox, CreatePoll, Timeline, MyPolls, Profile } from "./components";
 import { Switch, Route, Link, useHistory } from "react-router-dom";
 import "./investor.css";
 import { useEffect, useState } from "react";
@@ -21,31 +21,34 @@ const Investor = (params) => {
   return (
     <div>
       <div>
-        <div className="row mt-4 nav">
-          <div className="title">
-            <p className="text">masaail.com</p>
+        <div className="row mt-4">
+          <div className="nav-bar d-flex align-items-center justify-content-between">
+            <Link to={'/reviewer'} className="title text">
+                masaail.com
+            </Link>
+
+          <div className="row icons px-2">
+
+            <div className="d-flex align-items-center col icon px-2 mx-2">
+              <Link to={'/investor/profile'}>
+                <i class="fa-solid fa-user"></i>
+              </Link>
+            </div>
+
+            <div className="d-flex align-items-center col icon px-2 mx-2">
+              <Link to={'/chat'}>
+                <i class="fa-solid fa-comment-dots"></i>
+              </Link>
+            </div>
+
+            <div className="d-flex align-items-center col icon px-2 mx-2">
+              <Link to={'/auth/signin'} onClick={logout}>
+              <i class="fa-solid fa-power-off"></i></Link>
+            </div>
           </div>
 
-          <div className="col-md-3" style={{ marginLeft: "6.5%" }}>
-            <div className="form-group has-search form-control-feedback">
-              <span className="fa fa-search form-control-feedback"></span>
-              <input type="text" className="form-control" placeholder="Search" />
-            </div>
-          </div>
-          <div className="col">
-            <div className="text-end profile">
-              <div className="dropdown">
-                <div className="dropbtn">
-                  <i className="fas fa-sort-down"></i>
-                  <div className="dropdown-content">
-                    <a href="#">Profile</a>
-                    <a href="#">Settings</a>
-                    <a onClick={logout}>Logout</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+
         </div>
       </div>
       <div className="row mt-4">
@@ -75,6 +78,7 @@ const Investor = (params) => {
             <Route exact path="/investor/chatbox" component={ChatBox} />
             <Route exact path="/investor/createpoll" component={CreatePoll} />
             <Route exact path="/investor/polls" component={MyPolls} />
+            <Route exact path="/investor/profile" component={Profile} />
           </Switch>
         </div>
         <div className="col-md-3">
