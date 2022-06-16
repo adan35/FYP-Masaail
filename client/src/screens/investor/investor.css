@@ -184,3 +184,20 @@
 .like-filled{
   color: #d45555 !important;
 }
+
+.row .title {
+  cursor: pointer;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-bar {
+  margin-bottom: 10px;
+}
+
+.nav-bar .icon i {
+  font-size: 40px;
+  color: #14279b;
+  cursor: pointer;
+}
