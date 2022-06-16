@@ -201,3 +201,9 @@
   color: #14279b;
   cursor: pointer;
 }
+
+.profile-image img {
+  width: 40%;
+  border-radius: 50px;
+  object-fit: cover;
+}

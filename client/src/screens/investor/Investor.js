@@ -1,4 +1,4 @@
-import { ChatBox, CreatePoll, Timeline, MyPolls } from "./components";
+import { ChatBox, CreatePoll, Timeline, MyPolls, Profile } from "./components";
 import { Switch, Route, Link, useHistory } from "react-router-dom";
 import "./investor.css";
 import { useEffect, useState } from "react";
@@ -30,7 +30,9 @@ const Investor = (params) => {
           <div className="row icons px-2">
 
             <div className="d-flex align-items-center col icon px-2 mx-2">
-              <i class="fa-solid fa-user"></i>
+              <Link to={'/investor/profile'}>
+                <i class="fa-solid fa-user"></i>
+              </Link>
             </div>
 
             <div className="d-flex align-items-center col icon px-2 mx-2">
@@ -76,6 +78,7 @@ const Investor = (params) => {
             <Route exact path="/investor/chatbox" component={ChatBox} />
             <Route exact path="/investor/createpoll" component={CreatePoll} />
             <Route exact path="/investor/polls" component={MyPolls} />
+            <Route exact path="/investor/profile" component={Profile} />
           </Switch>
         </div>
         <div className="col-md-3">
