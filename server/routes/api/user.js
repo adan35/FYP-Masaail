@@ -5,6 +5,7 @@ let User = mongoose.model("User");
 let auth = require("../auth");
 let {OkResponse, BadRequestResponse} = require("express-http-response");
 let {sendEmailOtpMail} = require('../../utilities/sendgridEmail');
+const { log } = require("handlebars");
 
 router.post('/signup', (req, res, next) => {
   let user = new User(req.body.user);
@@ -48,6 +49,21 @@ router.put('/profile', auth.required, auth.user, (req, res, next) => {
     return next(new OkResponse(user));
   })
 })
+
+router.get('/me', auth.required, auth.user, (req, res, next) => {
+  try{
+    User.findOne({by: req.user._id}).exec(
+      (err, user) => {
+        if (err) return next(err);
+        next(new OkResponse(user));
+      }
+    );
+  }
+  catch(err){
+    console.log(err);
+    next(new BadRequestResponse(err));
+  }
+});
 
 router.post('/send/otp', (req, res, next) => {
   User.findOne({email: req.body.email}, (err, user) => {

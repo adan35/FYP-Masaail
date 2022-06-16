@@ -1,4 +1,4 @@
-import { CreatePost, MyPosts, Timeline } from "./components";
+import { CreatePost, MyPosts, Timeline, Profile } from "./components";
 import { Switch, Route, Link, useHistory } from "react-router-dom";
 import "./reviewer.css";
 import Polls from "../shared/polls";
@@ -32,7 +32,9 @@ const Reviewer = (params) => {
           <div className="row icons px-2">
 
             <div className="d-flex align-items-center col icon px-2 mx-2">
+            <Link to={'/reviewer/profile'}>
               <i class="fa-solid fa-user"></i>
+            </Link>
             </div>
 
             <div className="d-flex align-items-center col icon px-2 mx-2">
@@ -80,6 +82,7 @@ const Reviewer = (params) => {
 						<Route exact path="/reviewer" component={Timeline} />
 						<Route exact path="/reviewer/createpost" component={CreatePost} />
 						<Route exact path="/reviewer/myposts" component={MyPosts} />
+						<Route exact path="/reviewer/profile" component={Profile} />
 					</Switch>
 				</div>
 				{/* <div className="col-md-3">
